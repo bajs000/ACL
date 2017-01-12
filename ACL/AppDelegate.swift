@@ -4,9 +4,11 @@
 //
 //  Created by YunTu on 2016/11/28.
 //  Copyright © 2016年 work. All rights reserved.
-//
+//com.work.ACL
 
 import UIKit
+import SVProgressHUD
+import YTKNetwork
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        self.setNavigationBarAppearance()
+        YTKNetworkConfig.shared().baseUrl = "https://www.usacl.com/app/v1"
         return true
+    }
+    
+    func setNavigationBarAppearance() {
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "nav-back")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "nav-back")
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white]
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: .default)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

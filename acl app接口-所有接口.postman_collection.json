@@ -1,0 +1,1543 @@
+{
+	"id": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+	"name": "acl app接口",
+	"description": "除了登出，忘记密码外，所有页面都有一个login参数\n0表示为未登录，1表示已登录，2表示必须跳转到反馈页面",
+	"order": [
+		"aafd67ed-b3e1-a150-f33e-bbceba4857e2",
+		"b5e0a5d2-f69b-1d76-4c88-feb343972eb6",
+		"1f74e266-ff5d-f8cb-db20-a9f62d3a9cca",
+		"350c0aab-051a-8bdb-1be8-9d3ae5c1b1c3",
+		"8f94f0ab-9e47-71d6-ffed-3ae96ee37c6f",
+		"9a295615-c299-3144-36c9-46acf421da4a",
+		"b43131b5-f17d-3559-98a4-1f0e4e9069ee",
+		"76fa187b-3df5-5188-842f-48b5545cab74",
+		"d7a6ffb5-c6f7-cd58-5150-2815063398ee",
+		"e7dc5d00-1825-d400-1415-36b3e0bdfcc5",
+		"7eb8f3ec-4289-eb37-1719-822a885f23a2",
+		"c48dda33-4cf6-a745-df74-9b0f61cb048c",
+		"eac31728-affe-6126-5ebf-56478df0b52f",
+		"cc008239-850e-37ae-ecfe-6fbf734eefe1",
+		"2bcff347-127f-f143-4abe-47ecefc6f40d",
+		"45cec453-6879-8e73-7d82-7ddd0f1e1c5f",
+		"04b7117e-0cfe-074e-3d65-f84b9c57c52c",
+		"5f91ba8e-2614-9cd3-65ea-8e2afb492db4",
+		"5f85c84e-84f6-6a28-3f2e-ca5afdb54cc9",
+		"483a7398-66f3-597a-8d22-e1ec14262a40",
+		"888b515e-7239-6289-3e22-ac0f679d1db7",
+		"7b5936a9-22b8-b3b9-03fa-0d32f89a7706",
+		"1ceaba0d-3794-5a55-319a-a6cdf27cee72",
+		"1750c601-6b3b-4666-44f4-cc97b7e6b64b",
+		"61d4462b-2156-ee5c-f9f3-73407685a5f5",
+		"4a755ed8-3f10-f94f-fb70-bfb952721849",
+		"bbe2902e-54f8-9d87-92e9-54dd61a91157",
+		"e68d3fcd-37d3-9bbd-4d19-a2a73b44b410",
+		"65476d40-3614-6411-d682-0431ca01ccd0",
+		"65ef9b1d-2011-e31f-8fc2-c5561d90e3a8",
+		"c4494628-ac36-fe30-f7ce-f6bc32a7758d",
+		"77d5f30d-18d7-9e8c-47ad-41b5b579b9e0",
+		"74ec7a80-89a3-ec88-80a5-6e5f0699c8cb",
+		"beda45b9-7685-c67f-c6fc-9a3d6bd4e49b",
+		"45a54c56-4ce7-9b66-e941-6875ecf74e3e",
+		"71b9b62c-5be8-e0d5-c74f-ce53d946e2c6",
+		"9bc2dc2b-7526-b871-8c1f-f5e100178445",
+		"a40fb7d2-3dda-2061-7040-2d3c90103b53",
+		"fa2e2243-eae1-8475-ca63-3de01038a4b9",
+		"d89dfd40-819d-b247-17d5-d9cdb4963b0c",
+		"2add95d4-da79-c249-9c4f-d109fc2b6f2e",
+		"ff94dcb3-827e-08e4-7ff8-7ce2dd2ee1e5",
+		"4e107b11-04df-cb8b-8b17-dd35e14013ee",
+		"d01c2b81-a70d-7f98-de1b-67a8f19de539",
+		"f5783901-127e-81dd-ed74-4c7d7c3563cd",
+		"2e3a4cc9-0d76-5c86-ed6a-4b57eac72fff",
+		"062eb388-5906-c213-bcd4-caf2aae49399",
+		"affe3ef7-da54-dbc0-a83c-e8f6f3e4bbcd",
+		"533a8e63-d35f-bb72-97ff-65538afae22b",
+		"af56bde8-4243-d5c4-c1db-282d612d2000"
+	],
+	"folders": [],
+	"timestamp": 1479970434088,
+	"owner": "1285201",
+	"public": false,
+	"requests": [
+		{
+			"id": "04b7117e-0cfe-074e-3d65-f84b9c57c52c",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validateAccountPasswordForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "account_confirm",
+					"value": "确认交易密码",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的账号-安全设置-修改交易密码",
+			"description": "正确返回success\n错误返回error_password或error_confirm",
+			"descriptionFormat": "html",
+			"time": 1480462513112,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "062eb388-5906-c213-bcd4-caf2aae49399",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/register/searchNode&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "search_node",
+					"value": "搜索用户名",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "我的团队-注册新会员-搜索用户",
+			"description": "post search_node\n取调用完该url后，请马上调用“我的团队-注册新会员”，取该url的返回值",
+			"descriptionFormat": "html",
+			"time": 1481351544462,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1750c601-6b3b-4666-44f4-cc97b7e6b64b",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/dynamic_profit&token=AzMVmWESqyIIBH76THdsQfH8fi8wr39M",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "财务中心-动态收益",
+			"description": "perday_bonus数组为输出到表中的参数\ntype1 推荐奖\ntype2 对碰奖\ntype3 见点奖\ntype4 对碰奖（可能不存在于数组中，如不存在输出0.00）\ntotal 小计\n\nperday_bonus数组的下标为日期\npost该日期到-点击日期显示改日具体动态收益数据",
+			"descriptionFormat": "html",
+			"time": 1480913697982,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1ceaba0d-3794-5a55-319a-a6cdf27cee72",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/upgrade_account&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "rank",
+					"value": "2",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "account_password",
+					"value": "Abcd123",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-原点升级",
+			"description": "此页面需注意的参数为current_rank，该参数为当前星级。\r\nrank_total数组里为每星级的投资额。\r\nrank_total[current_rank]即为当前投资额，\r\n升级价格为rank_total[i]-rank_total[current_rank]\r\n该表不显示小于当前星级的行。如当前星级为2星，表的第一行就是2星，操作那一栏为空。\r\n升级按钮显示的数组为show_upgrade_button, 如果不在该数组中，如在该数组中，操作那栏显示升级按钮，否则显示text_upgrade_close参数中的文字。",
+			"descriptionFormat": "html",
+			"time": 1480467223163,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "1f74e266-ff5d-f8cb-db20-a9f62d3a9cca",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/column_left&token=fp9kAji5DU8TgyVYkE8kpT3qvS3OGAjr",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "二级菜单文字",
+			"description": "customer_rank + text_star 显示当前用户星级\ncustomer_rank_total 显示星级金额",
+			"descriptionFormat": "html",
+			"time": 1481072706902,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2add95d4-da79-c249-9c4f-d109fc2b6f2e",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/reset",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "new_password",
+					"value": "新密码（必须包含字母和数字）",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "new_confirm",
+					"value": "确认密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "忘记密码-提交新密码",
+			"description": "忘记密码第四步-提交新密码",
+			"descriptionFormat": "html",
+			"time": 1481344738245,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2bcff347-127f-f143-4abe-47ecefc6f40d",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validatePhoneForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "new_phone",
+					"value": "新电话号码",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改电话",
+			"description": "post参数:new_phone（11位手机号码）",
+			"descriptionFormat": "html",
+			"time": 1480462052406,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "2e3a4cc9-0d76-5c86-ed6a-4b57eac72fff",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/register&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1481351555204,
+			"name": "我的团队-注册新会员",
+			"description": "现在的返回参数tree为二叉树结构的数组，该二叉树最多显示7层。\n在tree数组中：\nis_parent 表示是否为父节点，如为0表示此节点为最低层节点，之下再无子节点。当节点的is_parent为0时，点击该节点时调用“我的团队-注册新会员-添加新会员”接口。\n\n每个节点的parent_id 指向父节点的 tree_id\n\nposition 0表示是左节点，1表示右节点\n\nrank 表示当前星级，即页面中星星的个数\n\nl_total表示 页面“1总1”左边的数字的值\nr_total表示 页面“1总1”右边的数字的值\n\nl_remain表示 页面“0余0”左边的数字的值\nr_remain表示 页面“0余0”右边的数字的值\n\nimage为用户头像\n\n\n\n还有一点，用户协议是html格式的，不知道你们那接受json的时候能不能正确处理，这个需要显示的。",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "350c0aab-051a-8bdb-1be8-9d3ae5c1b1c3",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/dashboard&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "首页",
+			"description": "无post",
+			"descriptionFormat": "html",
+			"time": 1480294362562,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "45a54c56-4ce7-9b66-e941-6875ecf74e3e",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/reward/validateStoreCreditTransfer&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "credit_amount",
+					"value": "金额",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "credit_account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-US积分-US积分转商城",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481348770644,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "45cec453-6879-8e73-7d82-7ddd0f1e1c5f",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validatePasswordForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "password",
+					"value": "新密码",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "confirm",
+					"value": "确认新密码",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改登录密码",
+			"description": "正确返回success\n错误返回error_password或error_confirm",
+			"descriptionFormat": "html",
+			"time": 1480462275476,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "483a7398-66f3-597a-8d22-e1ec14262a40",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validateEmailForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "email",
+					"value": "email地址",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改email",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480463358170,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "4a755ed8-3f10-f94f-fb70-bfb952721849",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/activation&token=AzMVmWESqyIIBH76THdsQfH8fi8wr39M",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "page",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "nickname",
+					"value": "接收方用户名",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "amount",
+					"value": "转出金额",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480914636153,
+			"name": "财务中心-注册币",
+			"description": "page 参数 每页100个结果\n转出注册币form参数\nnickname\namount\naccount_password",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "4e107b11-04df-cb8b-8b17-dd35e14013ee",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=information/news&token=k8NptMpWYh5TJopqAwhxURm4aiEWb8Wi",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "网页顶端功能-新闻",
+			"description": "点击每一条新闻，显示title和text的内容",
+			"descriptionFormat": "html",
+			"time": 1481345848602,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "533a8e63-d35f-bb72-97ff-65538afae22b",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/register/openNewTree&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "center_node",
+					"value": "点击树的根节点或最低层节点（该节点的is_parent不等于0）时，显示上3层节点或显示下3层节点。",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1481353548335,
+			"name": "我的团队-注册新会员-显示上级会员或下级会员",
+			"description": "注册新用户页面显示的2叉树最多为7层，所以当该用户下面的二叉树有很多层时，点击最底下的节点，会以你点击的节点做为第4层再往下显示3层（当然上面3层是原来树的5-7层），此值由接口提供。\r\n\r\n此时，你点击最上面的根节点，又可往上显示3层，回到原来的样子。",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "5f85c84e-84f6-6a28-3f2e-ca5afdb54cc9",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validateIdCardNameForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "id_card_name",
+					"value": "真实姓名",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改真实姓名",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480463475159,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "5f91ba8e-2614-9cd3-65ea-8e2afb492db4",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validateIdCardForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "id_card",
+					"value": "身份证号",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改身份证号",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480462760815,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "61d4462b-2156-ee5c-f9f3-73407685a5f5",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/dynamic_profit/getBonusByDate&token=AzMVmWESqyIIBH76THdsQfH8fi8wr39M",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "select_date",
+					"value": "2016-11-28",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-动态收益-点击日期显示改日具体动态收益数据",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480913977506,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "65476d40-3614-6411-d682-0431ca01ccd0",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/coin/validateSellCoin&token=yXXryJr66v4kArPF1PzUmqUPfZTkluta",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "sell_amount",
+					"value": "100",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "sell_account_password",
+					"value": "Abcd123",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-现金币-售出现金币",
+			"description": "返回参数\nsuccess 不为空即卖出成功\n错误参数:\nerror_amount\nerror_password",
+			"descriptionFormat": "html",
+			"time": 1480917550581,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "65ef9b1d-2011-e31f-8fc2-c5561d90e3a8",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/coin/validateTransfer&token=yXXryJr66v4kArPF1PzUmqUPfZTkluta",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "amount",
+					"value": "现金币转注册币数量",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-现金币-现金币转注册币",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481345513173,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "71b9b62c-5be8-e0d5-c74f-ce53d946e2c6",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/reward/validateReturnReward&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "return_reward",
+					"value": "金额",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "return_reward_account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-US积分-商城余额转回US积分",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481349123297,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "74ec7a80-89a3-ec88-80a5-6e5f0699c8cb",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/reward/validateTransfer&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "amount",
+					"value": "金额",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-US积分-现金币转US积分",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481348653358,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "76fa187b-3df5-5188-842f-48b5545cab74",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=share/my_share/validateSellShare&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "sell_amount",
+					"value": "100",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "account_password",
+					"value": "Abcd123",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的股份-售出股份表单",
+			"description": "返回值\n有错是时为error_amount或error_password\n正确时为success",
+			"descriptionFormat": "html",
+			"time": 1480298102971,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "77d5f30d-18d7-9e8c-47ad-41b5b579b9e0",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/reward&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "财务中心-US积分",
+			"description": "返回值enable_validate_transfer=0时，不显示“现金币转US积分”按钮",
+			"descriptionFormat": "html",
+			"time": 1481348476862,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7b5936a9-22b8-b3b9-03fa-0d32f89a7706",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/bank_info&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "name",
+					"value": "持卡人姓名",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bank",
+					"value": "开户行",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "card",
+					"value": "卡号",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "alipay",
+					"value": "支付宝",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "wechat",
+					"value": "微信号",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bitcoin",
+					"value": "比特币钱包",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-收款账户",
+			"description": "首先检查返回参数correct_verification是否为1\n如为0，请调用“我的帐号-安全设置”页面，在验证码输入且正确的情况下，才能进入收款账户页面进行修改。\nname\npost的参数对应一个错误返回值\nerror_name\nerror_bank\nerror_card\nerror_alipay",
+			"descriptionFormat": "html",
+			"time": 1480465175272,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7eb8f3ec-4289-eb37-1719-822a885f23a2",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/profile&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "我的帐号-基本信息",
+			"description": "无post参数\n添加头像的链接:\nhttps://www.usacl.com/app/v1/index.php?route=account/profile/editAvatar&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"descriptionFormat": "html",
+			"time": 1480458829750,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "888b515e-7239-6289-3e22-ac0f679d1db7",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/validateInheritNumForm&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "inherit_num",
+					"value": "继承者身份证号",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-修改继承者身份证号",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480463224715,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "8f94f0ab-9e47-71d6-ffed-3ae96ee37c6f",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=share/my_share&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "我的股份",
+			"description": "deal_name使用shares数组中的deal_type的值作为下标，对应于股份操作记录表中的操作那列。\r\nstatus_name使用shares数组中的status的值作为下标，对应于股份操作记录表中的状态那列。\r\n",
+			"descriptionFormat": "html",
+			"time": 1480295339911,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9a295615-c299-3144-36c9-46acf421da4a",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=share/reinvest&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "我的复投",
+			"description": "与我的股份页面基本一样",
+			"descriptionFormat": "html",
+			"time": 1480295714768,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "9bc2dc2b-7526-b871-8c1f-f5e100178445",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/change_log&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "金额变动日志",
+			"description": "post参数\npage 页数",
+			"descriptionFormat": "html",
+			"time": 1481347995686,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a40fb7d2-3dda-2061-7040-2d3c90103b53",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/login/checkNickname",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "forgotten_nickname",
+					"value": "测试帐号",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "忘记密码-验证用户名",
+			"description": "忘记密码第一步-输入用户名",
+			"descriptionFormat": "html",
+			"time": 1481344218286,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "aafd67ed-b3e1-a150-f33e-bbceba4857e2",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/login",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "nickname",
+					"value": "测试帐号",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "Abc123",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "captcha",
+					"value": "1234",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "language",
+					"value": "cn",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "登录页面",
+			"description": "language参数分别为cn(中)，en(英)，es（西班牙），需保存在app本地，下次自动使用该参数。\n\n保存返回的json中的token需要保持，作为每次连接是时需要的appkey。",
+			"descriptionFormat": "html",
+			"time": 1480293895762,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "af56bde8-4243-d5c4-c1db-282d612d2000",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/register&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "recommended_name",
+					"value": "直推人",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "nickname",
+					"value": "新建用户名",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "rank",
+					"value": "会员星级",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "phone",
+					"value": "电话号码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "tree_id",
+					"value": "该参数为隐藏的post参数，点击节点时该节点的tree_id",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1481355178988,
+			"name": "我的团队-注册新会员-添加新会员",
+			"description": "现在可以点击添加用户，打开添加新会员的form（请不要点确认，点了确认会导致该form无法再次显示）",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "affe3ef7-da54-dbc0-a83c-e8f6f3e4bbcd",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/register/getSideMost&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "side",
+					"value": "1为左箭头，2为右箭头",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "我的团队-注册新会员-点击左右箭头",
+			"description": "post参数：side\n取调用完该url后，请马上调用“我的团队-注册新会员”，取该url的返回值",
+			"descriptionFormat": "html",
+			"time": 1481351664156,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b43131b5-f17d-3559-98a4-1f0e4e9069ee",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=share/split&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "拆分明细",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480296979441,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b5e0a5d2-f69b-1d76-4c88-feb343972eb6",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/logout&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "登出",
+			"description": "无参数",
+			"descriptionFormat": "html",
+			"time": 1480297112446,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "bbe2902e-54f8-9d87-92e9-54dd61a91157",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/expenditure&token=AzMVmWESqyIIBH76THdsQfH8fi8wr39M",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "nickname",
+					"value": "大华99",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "transfer_type",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "start_date",
+					"value": "2016-01-01",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "end_date",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-注册币交易",
+			"description": "查询参数:\nnickname(用户名)\ntransfer_type(1转入，2转出)\nstart_date:格式2016-01-22（可不填）\nend_date:格式2016-11-30（可不填）\n",
+			"descriptionFormat": "html",
+			"time": 1480912559961,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "beda45b9-7685-c67f-c6fc-9a3d6bd4e49b",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/reward/validateReturnCoin&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "return_amount",
+					"value": "金额",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "account_password",
+					"value": "交易密码",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "财务中心-US积分-US积分转回现金币",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481348948808,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "c4494628-ac36-fe30-f7ce-f6bc32a7758d",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/coin&token=9SksSK6sbF2uriycTr2gShqImnLKv2je",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "财务中心-现金币交易",
+			"description": "此处和现金币页面基本一致，只是返回的bonus_coins中数据可能较少",
+			"descriptionFormat": "html",
+			"time": 1481343689884,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "c48dda33-4cf6-a745-df74-9b0f61cb048c",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/profile/editAvatar&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "file",
+					"value": "参数为上传的图像文件",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-基本信息-上传头像",
+			"description": "参数名:file\n参数类型:图片",
+			"descriptionFormat": "html",
+			"time": 1480458951665,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "cc008239-850e-37ae-ecfe-6fbf734eefe1",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "verification",
+					"value": "123456",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置",
+			"description": "correct_verification为1时表示验证码正确，0时验证码错误\n验证码正确是时，显示用户所有信息，参数为customer_info\n正确时才能进入修改用户信息为页面\n\n为了方便测试，验证码统一为123456",
+			"descriptionFormat": "html",
+			"time": 1480461763204,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d01c2b81-a70d-7f98-de1b-67a8f19de539",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=information/feedback&token=k8NptMpWYh5TJopqAwhxURm4aiEWb8Wi",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "feedback_type",
+					"value": "网页上的选项，post的值为数字",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "feedback_title",
+					"value": "反馈标题",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "feedback_text",
+					"value": "反馈正文",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "file",
+					"value": "上传的文件，post为文件类型",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "网页顶端功能-反馈",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481347580396,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d7a6ffb5-c6f7-cd58-5150-2815063398ee",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/my_team&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "search_name",
+					"value": "测试",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480909215345,
+			"name": "所有团队会员",
+			"description": "post参数search_name,用于搜索",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "d89dfd40-819d-b247-17d5-d9cdb4963b0c",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/login/validateSecurityCode",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "verification",
+					"value": "123456",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "忘记密码-提交手机验证码",
+			"description": "忘记密码第三步-提交收到的手机验证码\r\n",
+			"descriptionFormat": "html",
+			"time": 1481344428887,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "e68d3fcd-37d3-9bbd-4d19-a2a73b44b410",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/coin&token=yXXryJr66v4kArPF1PzUmqUPfZTkluta",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480917718842,
+			"name": "财务中心-现金币",
+			"description": "",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "e7dc5d00-1825-d400-1415-36b3e0bdfcc5",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=team/my_member&token=4DnlnT3VOO5CIVgsRsMZonuK5etsQ2xT",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "search_name",
+					"value": "左",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				},
+				{
+					"key": "page",
+					"value": "1",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480909212046,
+			"name": "我的直推会员",
+			"description": "post参数search_name",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"responses": []
+		},
+		{
+			"id": "eac31728-affe-6126-5ebf-56478df0b52f",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=account/security/enterSecurityCode&token=OkL1WogLkMbgip1Tqs8Qg5BI17wgmQN2",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [],
+			"dataMode": "params",
+			"name": "我的帐号-安全设置-发送验证码",
+			"description": "无参数，调用后给用户手机发送登录安全设置修改页面的验证码\n有错误信息返回参数",
+			"descriptionFormat": "html",
+			"time": 1480460300490,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f5783901-127e-81dd-ed74-4c7d7c3563cd",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=information/feedback/getFeedback&token=qVK1B3pLO0MiHDdkw96LBH3qVvrNBRqF",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "feedback_id",
+					"value": "在反馈页面得到的feedback_id",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "网页顶端功能-反馈-显示一条反馈的详情",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1481349589754,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "fa2e2243-eae1-8475-ca63-3de01038a4b9",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=common/login/enterSecurityCode",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": null,
+			"dataMode": "params",
+			"name": "忘记密码-发送手机验证码",
+			"description": "忘记密码第二步-点击发送手机验证码",
+			"descriptionFormat": "html",
+			"time": 1481344010026,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ff94dcb3-827e-08e4-7ff8-7ce2dd2ee1e5",
+			"headers": "",
+			"url": "https://www.usacl.com/app/v1/index.php?route=finance/coin/changeBuyList&token=yXXryJr66v4kArPF1PzUmqUPfZTkluta",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "59e114bf-1a00-5a18-deeb-1e0ab2c11646",
+			"data": [
+				{
+					"key": "buy_coin_value",
+					"value": "抢现金币金额（和网页一致）",
+					"type": "text",
+					"enabled": true,
+					"warning": ""
+				}
+			],
+			"dataMode": "params",
+			"name": "网页顶端功能-抢现金币",
+			"description": "post的buy_coin_value的值和页网站的一致",
+			"descriptionFormat": "html",
+			"time": 1481345072198,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

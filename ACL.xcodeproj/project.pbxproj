@@ -7,21 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184BF97EAD4C36845C272E28 /* Pods_ACL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAB5814C973006F35934B20 /* Pods_ACL.framework */; };
+		662C281F1DF152A2006CADCC /* UserRigstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662C281E1DF152A2006CADCC /* UserRigstViewController.swift */; };
+		662C28211DF1547E006CADCC /* TeamRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662C28201DF1547E006CADCC /* TeamRegistViewController.swift */; };
+		667634801DF6447A0068EF44 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676347F1DF6447A0068EF44 /* NetworkModel.swift */; };
+		667634821DF65AA50068EF44 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667634811DF65AA50068EF44 /* Helpers.swift */; };
+		667634841DF668C40068EF44 /* ACLTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667634831DF668C40068EF44 /* ACLTabBarViewController.swift */; };
+		6698C0581E10C23F00AACB33 /* USCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698C0571E10C23F00AACB33 /* USCell.swift */; };
+		6698C05A1E10F84400AACB33 /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698C0591E10F84400AACB33 /* AlertCell.swift */; };
+		66A338451DED6F9B00AB1933 /* StockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A338441DED6F9B00AB1933 /* StockCollectionViewController.swift */; };
+		66A338471DED7C4900AB1933 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A338461DED7C4900AB1933 /* StockDetailViewController.swift */; };
+		66A338491DEE5A6100AB1933 /* StockSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A338481DEE5A6100AB1933 /* StockSellViewController.swift */; };
+		66A3384C1DEE692F00AB1933 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3384B1DEE692F00AB1933 /* TeamViewController.swift */; };
+		66A3384E1DEE6BD700AB1933 /* TeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3384D1DEE6BD700AB1933 /* TeamMemberViewController.swift */; };
+		66A338501DEE6F9200AB1933 /* TeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A3384F1DEE6F9200AB1933 /* TeamMemberDetailViewController.swift */; };
+		66A338531DEE744500AB1933 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A338521DEE744500AB1933 /* FinanceViewController.swift */; };
 		66A4701C1DEBB79800158C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4701B1DEBB79800158C17 /* AppDelegate.swift */; };
-		66A4701E1DEBB79800158C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4701D1DEBB79800158C17 /* ViewController.swift */; };
 		66A470211DEBB79900158C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A4701F1DEBB79900158C17 /* Main.storyboard */; };
 		66A470231DEBB79900158C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A470221DEBB79900158C17 /* Assets.xcassets */; };
 		66A470261DEBB79900158C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66A470241DEBB79900158C17 /* LaunchScreen.storyboard */; };
+		66A4702F1DEBBAAB00158C17 /* UITextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4702E1DEBBAAB00158C17 /* UITextFieldFactory.swift */; };
+		66A470381DEBD6D200158C17 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A470371DEBD6D200158C17 /* PooCodeView.m */; };
+		66A4703B1DEC1FE900158C17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4703A1DEC1FE900158C17 /* LoginViewController.swift */; };
+		66A4703D1DEC1FFB00158C17 /* FindPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4703C1DEC1FFB00158C17 /* FindPwdViewController.swift */; };
+		66A4703F1DEC23E900158C17 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4703E1DEC23E900158C17 /* VerifyViewController.swift */; };
+		66A470411DEC2AC800158C17 /* SetNewPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470401DEC2AC800158C17 /* SetNewPwdViewController.swift */; };
+		66A470431DEC2DF300158C17 /* UpdateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470421DEC2DF300158C17 /* UpdateResultViewController.swift */; };
+		66A470481DED09F700158C17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470471DED09F700158C17 /* MainViewController.swift */; };
+		66A4704A1DED1B8300158C17 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470491DED1B8300158C17 /* CustomAlertView.swift */; };
+		66A4704C1DED1B9300158C17 /* CustomAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66A4704B1DED1B9300158C17 /* CustomAlertView.xib */; };
+		66A470521DED1E3F00158C17 /* UIImage+More.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A470511DED1E3F00158C17 /* UIImage+More.m */; };
+		66A470551DED566200158C17 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470541DED566200158C17 /* StockViewController.swift */; };
+		66A470571DED615700158C17 /* UIColor+More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A470561DED615700158C17 /* UIColor+More.swift */; };
+		66AC7F361DEE7E8000417D2B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F351DEE7E8000417D2B /* UserViewController.swift */; };
+		66AC7F391DEE8E5800417D2B /* AbortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F381DEE8E5800417D2B /* AbortViewController.swift */; };
+		66AC7F3B1DEE909600417D2B /* ACLFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F3A1DEE909600417D2B /* ACLFeatureViewController.swift */; };
+		66AC7F3D1DEEA3B300417D2B /* SafetyVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F3C1DEEA3B300417D2B /* SafetyVerifyViewController.swift */; };
+		66AC7F3F1DEEAC0C00417D2B /* SafetyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F3E1DEEAC0C00417D2B /* SafetyListViewController.swift */; };
+		66AC7F411DEEB22A00417D2B /* SafetyUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F401DEEB22A00417D2B /* SafetyUpdateViewController.swift */; };
+		66AC7F431DEEC60A00417D2B /* FeedbackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F421DEEC60A00417D2B /* FeedbackListViewController.swift */; };
+		66AC7F451DEEC82200417D2B /* FeedbackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F441DEEC82200417D2B /* FeedbackDetailViewController.swift */; };
+		66AC7F471DEECBF900417D2B /* MoneyChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F461DEECBF900417D2B /* MoneyChangeViewController.swift */; };
+		66AC7F491DEECD4F00417D2B /* MoneyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F481DEECD4F00417D2B /* MoneyListViewController.swift */; };
+		66AC7F4B1DEECF2500417D2B /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F4A1DEECF2500417D2B /* NewsListViewController.swift */; };
+		66AC7F4D1DEFA9C500417D2B /* UpdateStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F4C1DEFA9C500417D2B /* UpdateStockViewController.swift */; };
+		66AC7F4F1DEFB06800417D2B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F4E1DEFB06800417D2B /* AccountViewController.swift */; };
+		66AC7F511DEFB56800417D2B /* BaseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F501DEFB56800417D2B /* BaseInfoViewController.swift */; };
+		66AC7F541DEFBA3000417D2B /* FinanceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F531DEFBA3000417D2B /* FinanceListViewController.swift */; };
+		66AC7F561DEFBEC300417D2B /* EarnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F551DEFBEC300417D2B /* EarnDetailViewController.swift */; };
+		66AC7F581DEFBEFC00417D2B /* UIViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AC7F571DEFBEFC00417D2B /* UIViewFactory.swift */; };
+		66AD02071E0A0A300094231B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02061E0A0A300094231B /* WebViewController.swift */; };
+		66AD02091E0A16020094231B /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02081E0A16020094231B /* FeedbackViewController.swift */; };
+		66AD020B1E0A2A120094231B /* FileNetWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD020A1E0A2A120094231B /* FileNetWorkModel.swift */; };
+		66AD020D1E0A5BBE0094231B /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD020C1E0A5BBE0094231B /* NewsDetailViewController.swift */; };
+		66AD02111E0B8F920094231B /* Dispatch+More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02101E0B8F920094231B /* Dispatch+More.swift */; };
+		66AD02131E0CC2FA0094231B /* RankListAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02121E0CC2F90094231B /* RankListAlert.swift */; };
+		66AD02151E0CC3050094231B /* RankListAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AD02141E0CC3050094231B /* RankListAlert.xib */; };
+		66CBB43D1DF11BE300195273 /* TeamPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBB43C1DF11BE300195273 /* TeamPageViewController.swift */; };
+		66F6135D1E07B27500CE3613 /* FinanceDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B59628DAD5115F25A13AC30 /* Pods-ACL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACL/Pods-ACL.debug.xcconfig"; sourceTree = "<group>"; };
+		662C281E1DF152A2006CADCC /* UserRigstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRigstViewController.swift; sourceTree = "<group>"; };
+		662C28201DF1547E006CADCC /* TeamRegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamRegistViewController.swift; sourceTree = "<group>"; };
+		6676347F1DF6447A0068EF44 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		667634811DF65AA50068EF44 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		667634831DF668C40068EF44 /* ACLTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLTabBarViewController.swift; sourceTree = "<group>"; };
+		6698C0571E10C23F00AACB33 /* USCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCell.swift; sourceTree = "<group>"; };
+		6698C0591E10F84400AACB33 /* AlertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
+		66A338441DED6F9B00AB1933 /* StockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockCollectionViewController.swift; sourceTree = "<group>"; };
+		66A338461DED7C4900AB1933 /* StockDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		66A338481DEE5A6100AB1933 /* StockSellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockSellViewController.swift; sourceTree = "<group>"; };
+		66A3384B1DEE692F00AB1933 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		66A3384D1DEE6BD700AB1933 /* TeamMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberViewController.swift; sourceTree = "<group>"; };
+		66A3384F1DEE6F9200AB1933 /* TeamMemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewController.swift; sourceTree = "<group>"; };
+		66A338521DEE744500AB1933 /* FinanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
 		66A470181DEBB79800158C17 /* ACL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A4701B1DEBB79800158C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66A4701D1DEBB79800158C17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66A470201DEBB79900158C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66A470221DEBB79900158C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A470251DEBB79900158C17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66A470271DEBB79900158C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A4702E1DEBBAAB00158C17 /* UITextFieldFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldFactory.swift; sourceTree = "<group>"; };
+		66A470351DEBD6D200158C17 /* ACL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACL-Bridging-Header.h"; sourceTree = "<group>"; };
+		66A470361DEBD6D200158C17 /* PooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PooCodeView.h; sourceTree = "<group>"; };
+		66A470371DEBD6D200158C17 /* PooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PooCodeView.m; sourceTree = "<group>"; };
+		66A4703A1DEC1FE900158C17 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		66A4703C1DEC1FFB00158C17 /* FindPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPwdViewController.swift; sourceTree = "<group>"; };
+		66A4703E1DEC23E900158C17 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		66A470401DEC2AC800158C17 /* SetNewPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetNewPwdViewController.swift; sourceTree = "<group>"; };
+		66A470421DEC2DF300158C17 /* UpdateResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateResultViewController.swift; sourceTree = "<group>"; };
+		66A470471DED09F700158C17 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		66A470491DED1B8300158C17 /* CustomAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		66A4704B1DED1B9300158C17 /* CustomAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAlertView.xib; sourceTree = "<group>"; };
+		66A470501DED1E3F00158C17 /* UIImage+More.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+More.h"; sourceTree = "<group>"; };
+		66A470511DED1E3F00158C17 /* UIImage+More.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+More.m"; sourceTree = "<group>"; };
+		66A470541DED566200158C17 /* StockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		66A470561DED615700158C17 /* UIColor+More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+More.swift"; sourceTree = "<group>"; };
+		66AC7F351DEE7E8000417D2B /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		66AC7F381DEE8E5800417D2B /* AbortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbortViewController.swift; sourceTree = "<group>"; };
+		66AC7F3A1DEE909600417D2B /* ACLFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLFeatureViewController.swift; sourceTree = "<group>"; };
+		66AC7F3C1DEEA3B300417D2B /* SafetyVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyVerifyViewController.swift; sourceTree = "<group>"; };
+		66AC7F3E1DEEAC0C00417D2B /* SafetyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyListViewController.swift; sourceTree = "<group>"; };
+		66AC7F401DEEB22A00417D2B /* SafetyUpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafetyUpdateViewController.swift; sourceTree = "<group>"; };
+		66AC7F421DEEC60A00417D2B /* FeedbackListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackListViewController.swift; sourceTree = "<group>"; };
+		66AC7F441DEEC82200417D2B /* FeedbackDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackDetailViewController.swift; sourceTree = "<group>"; };
+		66AC7F461DEECBF900417D2B /* MoneyChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyChangeViewController.swift; sourceTree = "<group>"; };
+		66AC7F481DEECD4F00417D2B /* MoneyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyListViewController.swift; sourceTree = "<group>"; };
+		66AC7F4A1DEECF2500417D2B /* NewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		66AC7F4C1DEFA9C500417D2B /* UpdateStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateStockViewController.swift; sourceTree = "<group>"; };
+		66AC7F4E1DEFB06800417D2B /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		66AC7F501DEFB56800417D2B /* BaseInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInfoViewController.swift; sourceTree = "<group>"; };
+		66AC7F531DEFBA3000417D2B /* FinanceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceListViewController.swift; sourceTree = "<group>"; };
+		66AC7F551DEFBEC300417D2B /* EarnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarnDetailViewController.swift; sourceTree = "<group>"; };
+		66AC7F571DEFBEFC00417D2B /* UIViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewFactory.swift; sourceTree = "<group>"; };
+		66AD02061E0A0A300094231B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		66AD02081E0A16020094231B /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		66AD020A1E0A2A120094231B /* FileNetWorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNetWorkModel.swift; sourceTree = "<group>"; };
+		66AD020C1E0A5BBE0094231B /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		66AD02101E0B8F920094231B /* Dispatch+More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dispatch+More.swift"; sourceTree = "<group>"; };
+		66AD02121E0CC2F90094231B /* RankListAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListAlert.swift; sourceTree = "<group>"; };
+		66AD02141E0CC3050094231B /* RankListAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankListAlert.xib; sourceTree = "<group>"; };
+		66CBB43C1DF11BE300195273 /* TeamPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPageViewController.swift; sourceTree = "<group>"; };
+		66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceDealViewController.swift; sourceTree = "<group>"; };
+		7A4289BBDE876C2D1299D4CA /* Pods-ACL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACL.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACL/Pods-ACL.release.xcconfig"; sourceTree = "<group>"; };
+		9AAB5814C973006F35934B20 /* Pods_ACL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +140,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184BF97EAD4C36845C272E28 /* Pods_ACL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D75B21ACD3E7D481FC46E81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB5814C973006F35934B20 /* Pods_ACL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66A3384A1DEE691600AB1933 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				66A3384B1DEE692F00AB1933 /* TeamViewController.swift */,
+				66A3384D1DEE6BD700AB1933 /* TeamMemberViewController.swift */,
+				66A3384F1DEE6F9200AB1933 /* TeamMemberDetailViewController.swift */,
+				66CBB43C1DF11BE300195273 /* TeamPageViewController.swift */,
+				662C28201DF1547E006CADCC /* TeamRegistViewController.swift */,
+				662C281E1DF152A2006CADCC /* UserRigstViewController.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		66A338511DEE743100AB1933 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				66AC7F521DEFBA0600417D2B /* FinanceFunction */,
+				66A338521DEE744500AB1933 /* FinanceViewController.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
 		66A4700F1DEBB79800158C17 = {
 			isa = PBXGroup;
 			children = (
 				66A4701A1DEBB79800158C17 /* ACL */,
 				66A470191DEBB79800158C17 /* Products */,
+				BAC2D3D5511F1870D03C4573 /* Pods */,
+				3D75B21ACD3E7D481FC46E81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +198,144 @@
 		66A4701A1DEBB79800158C17 /* ACL */ = {
 			isa = PBXGroup;
 			children = (
+				66A4704D1DED1CA400158C17 /* Helpers */,
+				66A470321DEBCC6D00158C17 /* CustomView */,
+				66A4702D1DEBBA3E00158C17 /* Factory */,
+				66A470391DEC1FD500158C17 /* Login */,
+				66A470461DED09EC00158C17 /* Main */,
+				66A470531DED565100158C17 /* Stock */,
+				66A3384A1DEE691600AB1933 /* Team */,
+				66A338511DEE743100AB1933 /* Finance */,
+				66AC7F341DEE7E7000417D2B /* User */,
 				66A4701B1DEBB79800158C17 /* AppDelegate.swift */,
-				66A4701D1DEBB79800158C17 /* ViewController.swift */,
 				66A4701F1DEBB79900158C17 /* Main.storyboard */,
 				66A470221DEBB79900158C17 /* Assets.xcassets */,
 				66A470241DEBB79900158C17 /* LaunchScreen.storyboard */,
 				66A470271DEBB79900158C17 /* Info.plist */,
 			);
 			path = ACL;
+			sourceTree = "<group>";
+		};
+		66A4702D1DEBBA3E00158C17 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				66A4702E1DEBBAAB00158C17 /* UITextFieldFactory.swift */,
+				66AC7F571DEFBEFC00417D2B /* UIViewFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		66A470321DEBCC6D00158C17 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				66A470361DEBD6D200158C17 /* PooCodeView.h */,
+				66A470371DEBD6D200158C17 /* PooCodeView.m */,
+				66A470351DEBD6D200158C17 /* ACL-Bridging-Header.h */,
+				66A470491DED1B8300158C17 /* CustomAlertView.swift */,
+				66A4704B1DED1B9300158C17 /* CustomAlertView.xib */,
+				66AD02121E0CC2F90094231B /* RankListAlert.swift */,
+				66AD02141E0CC3050094231B /* RankListAlert.xib */,
+				6698C0571E10C23F00AACB33 /* USCell.swift */,
+				6698C0591E10F84400AACB33 /* AlertCell.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		66A470391DEC1FD500158C17 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				66A4703A1DEC1FE900158C17 /* LoginViewController.swift */,
+				66A4703C1DEC1FFB00158C17 /* FindPwdViewController.swift */,
+				66A4703E1DEC23E900158C17 /* VerifyViewController.swift */,
+				66A470401DEC2AC800158C17 /* SetNewPwdViewController.swift */,
+				66A470421DEC2DF300158C17 /* UpdateResultViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		66A470461DED09EC00158C17 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				66A470471DED09F700158C17 /* MainViewController.swift */,
+				667634831DF668C40068EF44 /* ACLTabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		66A4704D1DED1CA400158C17 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66AD02101E0B8F920094231B /* Dispatch+More.swift */,
+				66A470501DED1E3F00158C17 /* UIImage+More.h */,
+				66A470511DED1E3F00158C17 /* UIImage+More.m */,
+				66A470561DED615700158C17 /* UIColor+More.swift */,
+				6676347F1DF6447A0068EF44 /* NetworkModel.swift */,
+				66AD020A1E0A2A120094231B /* FileNetWorkModel.swift */,
+				667634811DF65AA50068EF44 /* Helpers.swift */,
+				66AD02061E0A0A300094231B /* WebViewController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		66A470531DED565100158C17 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				66A338441DED6F9B00AB1933 /* StockCollectionViewController.swift */,
+				66A470541DED566200158C17 /* StockViewController.swift */,
+				66A338461DED7C4900AB1933 /* StockDetailViewController.swift */,
+				66A338481DEE5A6100AB1933 /* StockSellViewController.swift */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		66AC7F341DEE7E7000417D2B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				66AC7F371DEE8E4B00417D2B /* UserFunction */,
+				66AC7F351DEE7E8000417D2B /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		66AC7F371DEE8E4B00417D2B /* UserFunction */ = {
+			isa = PBXGroup;
+			children = (
+				66AC7F381DEE8E5800417D2B /* AbortViewController.swift */,
+				66AC7F3A1DEE909600417D2B /* ACLFeatureViewController.swift */,
+				66AC7F3C1DEEA3B300417D2B /* SafetyVerifyViewController.swift */,
+				66AC7F3E1DEEAC0C00417D2B /* SafetyListViewController.swift */,
+				66AC7F401DEEB22A00417D2B /* SafetyUpdateViewController.swift */,
+				66AC7F421DEEC60A00417D2B /* FeedbackListViewController.swift */,
+				66AC7F441DEEC82200417D2B /* FeedbackDetailViewController.swift */,
+				66AD02081E0A16020094231B /* FeedbackViewController.swift */,
+				66AC7F481DEECD4F00417D2B /* MoneyListViewController.swift */,
+				66AC7F461DEECBF900417D2B /* MoneyChangeViewController.swift */,
+				66AC7F4A1DEECF2500417D2B /* NewsListViewController.swift */,
+				66AD020C1E0A5BBE0094231B /* NewsDetailViewController.swift */,
+				66AC7F4C1DEFA9C500417D2B /* UpdateStockViewController.swift */,
+				66AC7F4E1DEFB06800417D2B /* AccountViewController.swift */,
+				66AC7F501DEFB56800417D2B /* BaseInfoViewController.swift */,
+			);
+			path = UserFunction;
+			sourceTree = "<group>";
+		};
+		66AC7F521DEFBA0600417D2B /* FinanceFunction */ = {
+			isa = PBXGroup;
+			children = (
+				66AC7F531DEFBA3000417D2B /* FinanceListViewController.swift */,
+				66AC7F551DEFBEC300417D2B /* EarnDetailViewController.swift */,
+				66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */,
+			);
+			path = FinanceFunction;
+			sourceTree = "<group>";
+		};
+		BAC2D3D5511F1870D03C4573 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B59628DAD5115F25A13AC30 /* Pods-ACL.debug.xcconfig */,
+				7A4289BBDE876C2D1299D4CA /* Pods-ACL.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66A4702A1DEBB79900158C17 /* Build configuration list for PBXNativeTarget "ACL" */;
 			buildPhases = (
+				753CA71AB5FED326F51AE94F /* [CP] Check Pods Manifest.lock */,
 				66A470141DEBB79800158C17 /* Sources */,
 				66A470151DEBB79800158C17 /* Frameworks */,
 				66A470161DEBB79800158C17 /* Resources */,
+				468598680AA58EF5CA8CEA5B /* [CP] Embed Pods Frameworks */,
+				3697ECC83692BCAE5A862AA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -91,12 +368,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = work;
 				TargetAttributes = {
 					66A470171DEBB79800158C17 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LJRD943V36;
+						DevelopmentTeam = PA5REWWP2Y;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -106,7 +384,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 66A4700F1DEBB79800158C17;
@@ -126,19 +403,119 @@
 			files = (
 				66A470261DEBB79900158C17 /* LaunchScreen.storyboard in Resources */,
 				66A470231DEBB79900158C17 /* Assets.xcassets in Resources */,
+				66A4704C1DED1B9300158C17 /* CustomAlertView.xib in Resources */,
 				66A470211DEBB79900158C17 /* Main.storyboard in Resources */,
+				66AD02151E0CC3050094231B /* RankListAlert.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3697ECC83692BCAE5A862AA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACL/Pods-ACL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468598680AA58EF5CA8CEA5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACL/Pods-ACL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		753CA71AB5FED326F51AE94F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66A470141DEBB79800158C17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A4701E1DEBB79800158C17 /* ViewController.swift in Sources */,
+				66CBB43D1DF11BE300195273 /* TeamPageViewController.swift in Sources */,
+				667634821DF65AA50068EF44 /* Helpers.swift in Sources */,
+				66AC7F4D1DEFA9C500417D2B /* UpdateStockViewController.swift in Sources */,
+				66AD020B1E0A2A120094231B /* FileNetWorkModel.swift in Sources */,
+				66A3384C1DEE692F00AB1933 /* TeamViewController.swift in Sources */,
+				667634801DF6447A0068EF44 /* NetworkModel.swift in Sources */,
+				66AC7F491DEECD4F00417D2B /* MoneyListViewController.swift in Sources */,
+				66A3384E1DEE6BD700AB1933 /* TeamMemberViewController.swift in Sources */,
+				662C28211DF1547E006CADCC /* TeamRegistViewController.swift in Sources */,
+				66A338471DED7C4900AB1933 /* StockDetailViewController.swift in Sources */,
+				66AD02091E0A16020094231B /* FeedbackViewController.swift in Sources */,
+				66AC7F4B1DEECF2500417D2B /* NewsListViewController.swift in Sources */,
+				66A4704A1DED1B8300158C17 /* CustomAlertView.swift in Sources */,
+				66AC7F451DEEC82200417D2B /* FeedbackDetailViewController.swift in Sources */,
+				66A470431DEC2DF300158C17 /* UpdateResultViewController.swift in Sources */,
+				66AC7F391DEE8E5800417D2B /* AbortViewController.swift in Sources */,
+				66AC7F471DEECBF900417D2B /* MoneyChangeViewController.swift in Sources */,
+				66A4703B1DEC1FE900158C17 /* LoginViewController.swift in Sources */,
+				66A338501DEE6F9200AB1933 /* TeamMemberDetailViewController.swift in Sources */,
+				66AC7F361DEE7E8000417D2B /* UserViewController.swift in Sources */,
+				66A338451DED6F9B00AB1933 /* StockCollectionViewController.swift in Sources */,
+				66A470571DED615700158C17 /* UIColor+More.swift in Sources */,
+				66AC7F3F1DEEAC0C00417D2B /* SafetyListViewController.swift in Sources */,
+				667634841DF668C40068EF44 /* ACLTabBarViewController.swift in Sources */,
+				66AD020D1E0A5BBE0094231B /* NewsDetailViewController.swift in Sources */,
+				66AC7F561DEFBEC300417D2B /* EarnDetailViewController.swift in Sources */,
+				6698C05A1E10F84400AACB33 /* AlertCell.swift in Sources */,
+				66A338531DEE744500AB1933 /* FinanceViewController.swift in Sources */,
+				66A470381DEBD6D200158C17 /* PooCodeView.m in Sources */,
+				66AD02131E0CC2FA0094231B /* RankListAlert.swift in Sources */,
+				66A4702F1DEBBAAB00158C17 /* UITextFieldFactory.swift in Sources */,
+				662C281F1DF152A2006CADCC /* UserRigstViewController.swift in Sources */,
+				6698C0581E10C23F00AACB33 /* USCell.swift in Sources */,
+				66F6135D1E07B27500CE3613 /* FinanceDealViewController.swift in Sources */,
+				66AD02071E0A0A300094231B /* WebViewController.swift in Sources */,
+				66AC7F431DEEC60A00417D2B /* FeedbackListViewController.swift in Sources */,
+				66A4703F1DEC23E900158C17 /* VerifyViewController.swift in Sources */,
+				66A470411DEC2AC800158C17 /* SetNewPwdViewController.swift in Sources */,
+				66AC7F511DEFB56800417D2B /* BaseInfoViewController.swift in Sources */,
+				66AC7F541DEFBA3000417D2B /* FinanceListViewController.swift in Sources */,
+				66AC7F581DEFBEFC00417D2B /* UIViewFactory.swift in Sources */,
+				66A470551DED566200158C17 /* StockViewController.swift in Sources */,
+				66AD02111E0B8F920094231B /* Dispatch+More.swift in Sources */,
+				66A338491DEE5A6100AB1933 /* StockSellViewController.swift in Sources */,
+				66AC7F3B1DEE909600417D2B /* ACLFeatureViewController.swift in Sources */,
+				66AC7F411DEEB22A00417D2B /* SafetyUpdateViewController.swift in Sources */,
+				66A470521DED1E3F00158C17 /* UIImage+More.m in Sources */,
+				66A470481DED09F700158C17 /* MainViewController.swift in Sources */,
+				66A4703D1DEC1FFB00158C17 /* FindPwdViewController.swift in Sources */,
+				66AC7F3D1DEEA3B300417D2B /* SafetyVerifyViewController.swift in Sources */,
 				66A4701C1DEBB79800158C17 /* AppDelegate.swift in Sources */,
+				66AC7F4F1DEFB06800417D2B /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -182,6 +560,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -217,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -231,6 +611,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -257,26 +638,43 @@
 		};
 		66A4702B1DEBB79900158C17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B59628DAD5115F25A13AC30 /* Pods-ACL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LJRD943V36;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PA5REWWP2Y;
 				INFOPLIST_FILE = ACL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.work.ACL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yibiyicompany.Fruits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ACL/CustomView/ACL-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		66A4702C1DEBB79900158C17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4289BBDE876C2D1299D4CA /* Pods-ACL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LJRD943V36;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PA5REWWP2Y;
 				INFOPLIST_FILE = ACL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.work.ACL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yibiyicompany.Fruits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ACL/CustomView/ACL-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +698,7 @@
 				66A4702C1DEBB79900158C17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
