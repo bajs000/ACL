@@ -24,6 +24,7 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
     var totalHeight:CGFloat = 0.0
     var noticeStr:String?
     var alertDic:NSDictionary?
+    var loadHtml1:Bool = false
     
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var aquaeViewHeight: NSLayoutConstraint!
@@ -154,16 +155,18 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
         SVProgressHUD.dismiss()
         if webView.tag == self.aquareWeb.tag + 20 {
             if webView.scrollView.contentSize.height == 1 {
-                self.requestWebHtml(.aquae)
+                self.loadHtml1 = false
+//                self.requestWebHtml(.aquae)
                 return
             }
+            self.loadHtml1 = true
             totalHeight = totalHeight + webView.scrollView.contentSize.height + 68 + 49
             self.aquaeViewHeight.constant = webView.scrollView.contentSize.height + 68 + 49
             self.aquareWeb.loadHTMLString(self.html1!, baseURL: nil)
         }else if webView.tag == self.pieWeb.tag + 20{
-            self.pieViewHeight.constant = min(webView.scrollView.contentSize.height, 340) + 68 + 49
+            self.pieViewHeight.constant = min(webView.scrollView.contentSize.height, 260) + 68 + 49
             self.pieWeb.loadHTMLString(self.html2!, baseURL: nil)
-            totalHeight = totalHeight + min(webView.scrollView.contentSize.height, 340) + 68 + 49
+            totalHeight = totalHeight + min(webView.scrollView.contentSize.height, 260) + 68 + 49
         }else{
             return
         }
@@ -191,12 +194,12 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
             titleArr = ((tabbar.languageDic?["menu"] as! NSDictionary)[UserDefaults.standard.object(forKey: "language") as! String] as! NSArray) as! [String]
         }
         for item in (self.tabBarController?.tabBar.items)! {
-            let normalImg = UIImage(named: "main-bar-" + String(i))
-            let selectImg = UIImage(named: "main-bar-selected-" + String(i))
+            let normalImg = UIImage(named: "main-bar-" + String(i))?.withRenderingMode(.alwaysOriginal)
+            let selectImg = UIImage(named: "main-bar-selected-" + String(i))?.withRenderingMode(.alwaysOriginal)
             item.selectedImage = selectImg
             item.image = normalImg
             item.title = titleArr[i]
-            item .setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 33.0/255.0, green: 150.0/255.0, blue: 243.0/255.0, alpha: 1)], for: .selected)
+            item .setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 18.0/255.0, green: 184.0/255.0, blue: 246.0/255.0, alpha: 1)], for: .selected)
             item .setTitleTextAttributes([NSForegroundColorAttributeName:UIColor(red: 153.0/255.0, green: 153.0/255.0, blue: 153.0/255.0, alpha: 1)], for: .normal)
             i = i + 1
         }
@@ -224,7 +227,10 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
     }
     
     func personBtnDidClick(_ sender:UIButton) -> Void {
-        _ = self.navigationController?.pushViewController(TeamPageViewController.getInstance(), animated: true)
+        let web = WebViewController.getInstance()
+        web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
+        _ = self.navigationController?.pushViewController(web, animated: true)
+//        _ = self.navigationController?.pushViewController(TeamPageViewController.getInstance(), animated: true)
 //        let alert = Bundle.main.loadNibNamed("CustomAlertView", owner: nil, options: nil)?[1] as! CustomAlertView
 //        if self.languageDic != nil{
 //            alert.showNotice(title: (self.languageDic?["text_bulletin_title"] as? String)!, detail: (Helpers.optimizeString((self.languageDic?["text_bulletin_content"] as? String)!)))
@@ -260,11 +266,19 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
                         self.noticeLabel.text = self.noticeStr
                     }
                     
-                    (self.footerView.viewWithTag(51) as! UILabel).text = self.languageDic?["split_times"] as? String
+                    if self.languageDic?["split_times"] != nil && (self.languageDic?["split_times"] as! NSObject).isKind(of: NSString.self) {
+                        (self.footerView.viewWithTag(51) as! UILabel).text = self.languageDic?["split_times"] as? String
+                    }else if self.languageDic?["split_times"] != nil && (self.languageDic?["split_times"] as! NSObject).isKind(of: NSNumber.self) {
+                        (self.footerView.viewWithTag(51) as! UILabel).text = (self.languageDic?["split_times"] as? NSNumber)?.stringValue
+                    }
                     (self.footerView.viewWithTag(52) as! UILabel).text = self.languageDic?["text_split_times"] as? String
                     (self.footerView.viewWithTag(53) as! UILabel).text = self.languageDic?["current_share_price"] as? String
                     (self.footerView.viewWithTag(54) as! UILabel).text = self.languageDic?["text_chart_block2"] as? String
-                    (self.footerView.viewWithTag(55) as! UILabel).text = self.languageDic?["split_num"] as? String
+                    if self.languageDic?["split_num"] != nil && (self.languageDic?["split_num"] as! NSObject).isKind(of: NSString.self) {
+                        (self.footerView.viewWithTag(55) as! UILabel).text = self.languageDic?["split_num"] as? String
+                    }else if self.languageDic?["split_num"] != nil && (self.languageDic?["split_num"] as! NSObject).isKind(of: NSNumber.self) {
+                        (self.footerView.viewWithTag(55) as! UILabel).text = (self.languageDic?["split_num"] as? NSNumber)?.stringValue
+                    }
                     (self.footerView.viewWithTag(56) as! UILabel).text = self.languageDic?["text_chart_block3"] as? String
                     
                     (self.footerView.viewWithTag(61) as! UILabel).text = self.languageDic?["recommended_bonus"] as? String
@@ -294,10 +308,11 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
             self.tableView.viewWithTag(type.rawValue + 20)?.removeFromSuperview()
         }
         let req = URLRequest(url: URL(string: "https://www.usacl.com/app/v1" + "/index.php?route=common/price_chart&token=" + (UserDefaults.standard.object(forKey: "token") as? String)! + "&show_chart=" + String(type.rawValue / 10))!)
-        let web = UIWebView(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height * 10, width: UIScreen.main.bounds.size.width, height: 1))
+        let web = UIWebView(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height * 10, width: UIScreen.main.bounds.size.width, height: 300))
         web.tag = type.rawValue + 20
         self.tableView.addSubview(web)
         web.delegate = self
+        
 
         NSURLConnection.sendAsynchronousRequest(req, queue: OperationQueue(), completionHandler: {(response:URLResponse?, data:Data?, error:Error?) -> Void in
             if error == nil {

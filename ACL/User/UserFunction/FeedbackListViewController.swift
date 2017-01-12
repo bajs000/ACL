@@ -19,6 +19,8 @@ class FeedbackListViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
+    
     var page = 1
     var dataSource:NSDictionary?
     
@@ -150,6 +152,11 @@ class FeedbackListViewController: UIViewController,UITableViewDelegate,UITableVi
                 self.feedbackBtn.setTitle(self.dataSource?["text_feedback_btnfeedback"] as? String, for: .normal)
                 self.tableView.reloadData()
                 SVProgressHUD.dismiss()
+                if self.dataSource != nil && (self.dataSource?["feedbacks"] as! NSArray).count > 20 {
+                    self.footerView.isHidden = false
+                }else{
+                    self.footerView.isHidden = true
+                }
             }else{
                 self.dismiss(animated: true, completion: nil)
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)

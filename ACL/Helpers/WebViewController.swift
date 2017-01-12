@@ -24,6 +24,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
         SVProgressHUD.dismiss()
+        print(webView.scrollView.contentSize.height)
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {

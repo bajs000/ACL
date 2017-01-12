@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SDWebImage
 
 class LoginViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var codeView: CodeTextField!
     @IBOutlet weak var launchView: UIView!
     @IBOutlet weak var launchCircle: UIView!
+    @IBOutlet weak var loginBg: UIImageView!
     var count = 0
     var languageDic:NSMutableDictionary?
     
@@ -141,6 +143,8 @@ class LoginViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.loginBg.sd_setImage(with: URL(string: "https://www.usacl.com/login-assets/img/phone_bg.jpg"), placeholderImage: UIImage(named: "login-bg"))
     }
     
     override func viewWillDisappear(_ animated: Bool) {

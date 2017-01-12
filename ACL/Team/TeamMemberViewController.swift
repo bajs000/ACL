@@ -23,6 +23,8 @@ class TeamMemberViewController: UIViewController,UISearchBarDelegate,UITableView
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
+    
     var dataSource:NSDictionary?
     var page = 1
     var type:TeamType?
@@ -54,6 +56,17 @@ class TeamMemberViewController: UIViewController,UISearchBarDelegate,UITableView
         searchBar?.delegate = self
         searchBar?.placeholder = "在此搜索用户名."
         self.navigationItem.titleView = searchBar
+        
+        let btn = Helpers.findClass(UIButton.self, at: searchBar!) as! UIButton
+        if UserDefaults.standard.object(forKey: "language") != nil {
+            if (UserDefaults.standard.object(forKey: "language") as! String) == "en" {
+                btn.setTitle("search", for: .normal)
+            }else {
+                btn.setTitle("搜索", for: .normal)
+            }
+        }else{
+            btn.setTitle("搜索", for: .normal)
+        }
         
         self.pageBtn.layer.cornerRadius = 4
         
@@ -90,6 +103,8 @@ class TeamMemberViewController: UIViewController,UISearchBarDelegate,UITableView
     //MARK:- UISearchBarDelegate
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.keyWindow?.endEditing(true)
+        self.requestAllMember(searchBar.text)
+        searchBar.text = ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -130,11 +145,11 @@ class TeamMemberViewController: UIViewController,UISearchBarDelegate,UITableView
         let dic = (self.dataSource?["nodes"] as! NSArray)[indexPath.row] as! NSDictionary
         (cell.viewWithTag(1) as! UILabel).text = dic["date_added"] as? String
         (cell.viewWithTag(2) as! UILabel).text = dic["customer_name"] as? String
-        var key = "text_member_star"
-        if self.type == TeamType.All {
-            key = "text_team_star"
-        }
-        (cell.viewWithTag(3) as! UILabel).text = dic["rank"] as! String + (self.dataSource?[key] as! String)
+//        var key = "text_member_star"
+//        if self.type == TeamType.All {
+//            key = "text_team_star"
+//        }
+        (cell.viewWithTag(3) as! UILabel).text = dic["rank"] as? String// + (self.dataSource?[key] as! String)
         (cell.viewWithTag(4) as! UILabel).text = dic["level"] as? String
         return cell
     }
@@ -177,6 +192,13 @@ class TeamMemberViewController: UIViewController,UISearchBarDelegate,UITableView
                 self.previousBtn.setTitle((self.dataSource?[key1] as? String)!, for: .normal)
                 self.nextBtn.setTitle((self.dataSource?[key2] as? String)!, for: .normal)
                 self.searchBar?.placeholder = self.dataSource?["text_search"] as? String
+                
+                if self.dataSource != nil && (self.dataSource?["nodes"] as! NSArray).count > 20 {
+                    self.footerView.isHidden = false
+                }else{
+                    self.footerView.isHidden = true
+                }
+                
             }else{
                 self.dismiss(animated: true, completion: nil)
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)

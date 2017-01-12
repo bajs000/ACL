@@ -23,6 +23,7 @@ class StockViewController: UIViewController,UISearchBarDelegate,UITableViewDeleg
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
     
     var searchBar:UISearchBar?
     var dataSource:NSDictionary?
@@ -54,6 +55,17 @@ class StockViewController: UIViewController,UISearchBarDelegate,UITableViewDeleg
         searchBar?.delegate = self
         searchBar?.placeholder = "在此搜索股份操作记录."
         self.navigationItem.titleView = searchBar
+        
+        let btn = Helpers.findClass(UIButton.self, at: searchBar!) as! UIButton
+        if UserDefaults.standard.object(forKey: "language") != nil {
+            if (UserDefaults.standard.object(forKey: "language") as! String) == "en" {
+                btn.setTitle("search", for: .normal)
+            }else {
+                btn.setTitle("搜索", for: .normal)
+            }
+        }else{
+            btn.setTitle("搜索", for: .normal)
+        }
         
         self.pageBtn.layer.cornerRadius = 4
         
@@ -90,6 +102,7 @@ class StockViewController: UIViewController,UISearchBarDelegate,UITableViewDeleg
     //MARK:- UISearchBarDelegate
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.keyWindow?.endEditing(true)
+        searchBar.text = ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -241,6 +254,13 @@ class StockViewController: UIViewController,UISearchBarDelegate,UITableViewDeleg
                 self.dataSource = dic
                 self.tableView.reloadData()
                 self.searchBar?.placeholder = dic["text_search"] as? String
+                
+                if self.dataSource != nil && (self.dataSource?["shares"] as! NSArray).count > 20 {
+                    self.footerView.isHidden = false
+                }else{
+                    self.footerView.isHidden = true
+                }
+                
             }else{
                 self.dismiss(animated: true, completion: nil)
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)

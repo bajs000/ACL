@@ -79,7 +79,7 @@ class PhoneTextField: UITextFieldFactory {
     override func editDidChange(_ sender:UITextField) -> Void {
         super.editDidChange(sender)
         if (sender.text?.characters.count)! > length {
-            sender.text = sender.text?.substring(to: (sender.text?.index((sender.text?.startIndex)!, offsetBy: 11))!)
+            sender.text = sender.text?.substring(to: (sender.text?.index((sender.text?.startIndex)!, offsetBy: length))!)
         }
     }
 }
@@ -97,8 +97,10 @@ class CodeTextField: UITextFieldFactory {
         
         self.addTarget(self, action: #selector(editDidChange), for: .editingChanged)
         
-        codeView = PooCodeView.init(frame: CGRect(x: self.bounds.width - 144, y: 1, width: 90, height: 46))
-        self.addSubview(codeView!)
+        codeView = PooCodeView.init(frame: CGRect(x: 0, y: 1, width: 90, height: 46))
+//        self.addSubview(codeView!)
+        self.rightView = codeView
+        self.rightViewMode = .always
         code = (codeView?.code)!
         
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapToChangeCode))

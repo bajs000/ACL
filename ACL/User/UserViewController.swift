@@ -87,6 +87,9 @@ class UserViewController: UITableViewController {
             case 3:
                 let web = WebViewController.getInstance()
                 web.url = "https://www.usacl.net"
+//                web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
+//                web.url = "https://www.usacl.com/app/v1/index.php?route=common/price_chart&token=" + (UserDefaults.standard.object(forKey: "token") as? String)! + "&show_chart=1"
+//                web.url = "https://www.usacl.com/app/v1/index.php?route=common/price_chart&token=LzHIiFhItm2AQbyaAvHaRyStvjXfpZLE&show_chart=2"
                 _ = self.navigationController?.pushViewController(web, animated: true)
                 break
             case 4:

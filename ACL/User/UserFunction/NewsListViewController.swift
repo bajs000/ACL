@@ -20,6 +20,8 @@ class NewsListViewControler: UIViewController,UITableViewDataSource,UITableViewD
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
+    
     var page = 1
     var dataSource:NSDictionary?
     
@@ -105,6 +107,12 @@ class NewsListViewControler: UIViewController,UITableViewDataSource,UITableViewD
                         self.dataSource = dic
                         self.title = self.dataSource?["text_news_title"] as? String
                         self.tableView.reloadData()
+                    
+                        if self.dataSource != nil && (self.dataSource?["news"] as! NSArray).count > 20 {
+                            self.footerView.isHidden = false
+                        }else{
+                            self.footerView.isHidden = true
+                        }
                     }else{
                         self.dismiss(animated: true, completion: nil)
                         SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)

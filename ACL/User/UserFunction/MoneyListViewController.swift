@@ -18,6 +18,8 @@ class MoneyListViewControler: UIViewController,UITableViewDataSource,UITableView
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
+    
     var page = 1
     var dataSource:NSDictionary?
     var keys:[String]?
@@ -99,6 +101,12 @@ class MoneyListViewControler: UIViewController,UITableViewDataSource,UITableView
                 self.tableView.reloadData()
                 SVProgressHUD.dismiss()
                 self.title = dic["text_log_title"] as? String
+                
+                if self.dataSource != nil && (self.keys?.count)! > 20 {
+                    self.footerView.isHidden = false
+                }else{
+                    self.footerView.isHidden = true
+                }
             }else{
                 self.dismiss(animated: true, completion: nil)
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)

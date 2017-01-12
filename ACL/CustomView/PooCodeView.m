@@ -24,7 +24,7 @@
         float red = arc4random() % 100 / 100.0;
         float green = arc4random() % 100 / 100.0;
         float blue = arc4random() % 100 / 100.0;
-        UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:0.2];
+        UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:0.5];
         self.backgroundColor = color;
         [self change];
     }

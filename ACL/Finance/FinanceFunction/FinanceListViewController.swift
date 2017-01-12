@@ -27,6 +27,8 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet weak var pageBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var footerView: UIView!
+    
     var dataSource:NSDictionary?
     var keys:NSArray?
     var page = 1
@@ -513,6 +515,62 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
                     self.keys =  self.keys?.sortedArray(using: #selector(NSDecimalNumber.compare(_:))) as NSArray?
                 }
                 self.tableView.reloadData()
+                
+                
+                if self.dataSource != nil{
+                    switch self.type {
+                    case .earn:
+                        if self.dataSource?["perday_bonus"] != nil {
+                            if self.dataSource != nil && self.keys!.count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                        break
+                    case .regist:
+                        if self.dataSource?["bonus_coins"] != nil {
+                            if self.dataSource != nil && (self.dataSource?["bonus_coins"] as! NSArray).count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                    case .registDeal:
+                        if self.dataSource?["bonus_coins"] != nil {
+                            if self.dataSource != nil && (self.dataSource?["bonus_coins"] as! NSArray).count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                    case .cash:
+                        if self.dataSource?["bonus_coins"] != nil {
+                            if self.dataSource != nil && (self.dataSource?["bonus_coins"] as! NSArray).count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                    case .cashDeal:
+                        if self.dataSource?["bonus_coins"] != nil {
+                            if self.dataSource != nil && (self.dataSource?["bonus_coins"] as! NSArray).count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                    case .usScore:
+                        if self.dataSource?["rewards"] != nil {
+                            if self.dataSource != nil && (self.dataSource?["rewards"] as! NSArray).count > 20 {
+                                self.footerView.isHidden = false
+                            }else{
+                                self.footerView.isHidden = true
+                            }
+                        }
+                        break
+                    }
+                }
             }else{
                 self.dismiss(animated: true, completion: nil)
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
