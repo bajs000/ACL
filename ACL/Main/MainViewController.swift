@@ -227,10 +227,10 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
     }
     
     func personBtnDidClick(_ sender:UIButton) -> Void {
-        let web = WebViewController.getInstance()
-        web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
-        _ = self.navigationController?.pushViewController(web, animated: true)
-//        _ = self.navigationController?.pushViewController(TeamPageViewController.getInstance(), animated: true)
+//        let web = WebViewController.getInstance()
+//        web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
+//        _ = self.navigationController?.pushViewController(web, animated: true)
+        _ = self.navigationController?.pushViewController(TeamPageViewController.getInstance(), animated: true)
 //        let alert = Bundle.main.loadNibNamed("CustomAlertView", owner: nil, options: nil)?[1] as! CustomAlertView
 //        if self.languageDic != nil{
 //            alert.showNotice(title: (self.languageDic?["text_bulletin_title"] as? String)!, detail: (Helpers.optimizeString((self.languageDic?["text_bulletin_content"] as? String)!)))
@@ -254,7 +254,8 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
                     self.tableView.reloadData()
                     SVProgressHUD.dismiss()
                     self.totalHeight = 0
-                    self.requestWebHtml(.aquae)
+                    // TODO: - cancel
+//                    self.requestWebHtml(.aquae)
                     self.noticeStr = Helpers.optimizeString((dic["text_bulletin_content"] as? String)!)
                     self.aquareLabel.text = dic["text_chart_title"] as? String
                     self.pieLabel.text = dic["text_cake_title"] as? String

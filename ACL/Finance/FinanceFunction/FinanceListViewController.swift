@@ -33,6 +33,7 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
     var keys:NSArray?
     var page = 1
     var type:FinanceType = .earn
+    var searchDic:[String:String]?
     
     @IBAction func pageChangeValue(_ sender: UIButton) {
         if sender.tag == 1 {
@@ -329,6 +330,7 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
                 (cell.viewWithTag(23) as! UILabel).text = (self.dataSource?["total_sell_coin"] as? String)
                 (cell.viewWithTag(3) as! UIButton).setTitle(self.dataSource?["text_customer_activation_transfer"] as? String, for: .normal)
                 (cell.viewWithTag(3) as! UIButton).layer.cornerRadius = 4
+                (cell.viewWithTag(3) as! UIButton).addTarget(self, action: #selector(searchTimeBtnDidClick(_:)), for: .touchUpInside)
                 break
             case .cash:
                 (cell.viewWithTag(1) as! UILabel).text = self.dataSource?["text_cash_coin"] as? String
@@ -455,6 +457,16 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
         }
     }
     
+    func searchTimeBtnDidClick(_ sender:UIButton) -> Void {
+        let vc = FinanceTimeViewController.getInstance()
+        vc.dataSource = self.dataSource
+        vc.complete = {(dic) -> Void in
+            self.searchDic = dic
+            self.requestList(nil)
+        }
+        _ = self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func saleBtnDidClick(_ sender:UIButton) -> Void {
         let cell:UITableViewCell? = Helpers.findSuperViewClass(UITableViewCell.self, with: sender) as? UITableViewCell
         if cell != nil {
@@ -490,13 +502,16 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
         case .registDeal:
             url = "index.php?route=finance/expenditure&token="
             dic = ["transfer_type":"1","nickname":text,"start_date":"2016-01-01","start_date":""]
+            if searchDic != nil {
+                dic = ["transfer_type":(searchDic?["1"])!,"nickname":(searchDic?["0"])!,"start_date":(searchDic?["2"])!,"end_date":(searchDic?["3"])!]
+            }
             break
         case .cash:
             url = "index.php?route=finance/coin&token="
             dic = [:]
             break
         case .cashDeal:
-            url = "index.php?route=finance/coin&token="
+            url = "index.php?route=finance/coin_deal&token="
             dic = [:]
             break
         case .usScore:

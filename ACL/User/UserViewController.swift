@@ -22,7 +22,7 @@ class UserViewController: UITableViewController {
         }
         titleDic = ["0":["基本信息","收款账户","安全设置","原点升级"],"1":["金额变动日志","新闻","反馈","ACL商场","关于ACL"]]
         if tabbar.languageDic != nil {
-            titleDic = ["0":[(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_profile"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_bankinfo"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_security"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_upgrade"] as! String],"1":[(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_log"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_news"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_feedback"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_mall"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_meeting"] as! String]]
+            titleDic = ["0":[(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_profile"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_bankinfo"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_security"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_upgrade"] as! String],"1":[(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_log"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_news"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_feedback"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_mall"] as! String,(tabbar.languageDic?["newmenu"] as! NSDictionary)["text_header_about"] as! String]]
         }
     }
     

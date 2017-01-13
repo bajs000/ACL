@@ -27,6 +27,11 @@ class FinanceDealViewController: UITableViewController {
     var indexPath:IndexPath?
     var needSection:Bool = false
     var textFieldDic = [String:UITextField]()
+    var amountTextField: UITextField?
+    var discountText: UITextField?
+    var receiveText: UITextField?
+    var currentAccount: String = ""
+    
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var commitBtn: UIButton!
     
@@ -241,6 +246,7 @@ class FinanceDealViewController: UITableViewController {
             }
             break
         case .cash, .cashDeal:
+            textField.removeTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
             if self.needSection{
                 textField.text = nil
                 if indexPath.section == 0 {
@@ -261,14 +267,30 @@ class FinanceDealViewController: UITableViewController {
                             textField.placeholder = self.resultDic?["error_amount"] as? String
                             textField.text = nil
                         }
+                        textField.text = self.currentAccount
+                        self.amountTextField = textField
+                        self.amountTextField?.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
                         break
                     case 2:
                         label.text = self.dataSource?["text_cash_fee"] as? String
                         textField.keyboardType = .numberPad
+                        textField.isEnabled = false
+                        self.discountText = textField
+                        if self.currentAccount.characters.count > 0 {
+                            textField.text = "$" + String(Float(self.currentAccount)! * 0.1)
+                        }else{
+                            textField.text = "$0"
+                        }
                         break
                     case 3:
                         label.text = self.dataSource?["text_cash_realincome"] as? String
                         textField.isEnabled = false
+                        self.receiveText = textField
+                        if self.currentAccount.characters.count > 0 {
+                            textField.text = "$" + String(Float(self.currentAccount)! * 0.9)
+                        }else{
+                            textField.text = "$0"
+                        }
                         break
                     case 4:
                         label.text = self.dataSource?["text_cash_psw"] as? String
@@ -518,6 +540,18 @@ class FinanceDealViewController: UITableViewController {
             break
         }
         return cell
+    }
+    
+    func textDidChange(_ sender: UITextField){
+        currentAccount = sender.text!
+        
+        if self.currentAccount.characters.count > 0 {
+            self.discountText?.text = "$" + String(Float(currentAccount)! * 0.1)
+            self.receiveText?.text = "$" + String(Float(currentAccount)! * 0.9)
+        }else{
+            self.discountText?.text = "$0"
+            self.receiveText?.text = "$0"
+        }
     }
     
 }

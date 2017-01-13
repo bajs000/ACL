@@ -25,7 +25,7 @@ class TeamPageViewController: UIPageViewController,UIPageViewControllerDelegate,
         self.delegate = self
         self.dataSource = self
         
-        self.requestRegist()
+//        self.requestRegist()
         
         let vc1 = UserRigstViewController.getInstance()
         vc1.pageIndex = 0
@@ -68,29 +68,29 @@ class TeamPageViewController: UIPageViewController,UIPageViewControllerDelegate,
         }
     }
     
-    func requestRegist() -> Void {
-        SVProgressHUD.show()
-        let req = URLRequest(url: URL(string:"https://www.usacl.com/app/v1/index.php?route=team/register&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!)!)
-        NSURLConnection.sendAsynchronousRequest(req, queue: OperationQueue(), completionHandler: {(_ response:URLResponse?, data:Data?, error:Error?) -> Void in
-            SVProgressHUD.dismiss()
-            if error == nil {
-                do{
-                    let dic = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary
-                    if Int(dic["login"] as! String) == 1 {
-                        for vc in self.VCArr {
-                            vc.dataSource = dic
-                        }
-                    }else{
-                        self.dismiss(animated: true, completion: nil)
-                        SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
-                    }
-                }catch{
-                
-                }
-            }else{
-                print(error!)
-            }
-        })
-    }
+//    func requestRegist() -> Void {
+//        SVProgressHUD.show()
+//        let req = URLRequest(url: URL(string:"https://www.usacl.com/app/v1/index.php?route=team/register&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!)!)
+//        NSURLConnection.sendAsynchronousRequest(req, queue: OperationQueue(), completionHandler: {(_ response:URLResponse?, data:Data?, error:Error?) -> Void in
+//            SVProgressHUD.dismiss()
+//            if error == nil {
+//                do{
+//                    let dic = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSDictionary
+//                    if Int(dic["login"] as! String) == 1 {
+//                        for vc in self.VCArr {
+//                            vc.dataSource = dic
+//                        }
+//                    }else{
+//                        self.dismiss(animated: true, completion: nil)
+//                        SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
+//                    }
+//                }catch{
+//                
+//                }
+//            }else{
+//                print(error!)
+//            }
+//        })
+//    }
     
 }

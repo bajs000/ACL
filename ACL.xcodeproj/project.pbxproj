@@ -13,6 +13,7 @@
 		667634801DF6447A0068EF44 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676347F1DF6447A0068EF44 /* NetworkModel.swift */; };
 		667634821DF65AA50068EF44 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667634811DF65AA50068EF44 /* Helpers.swift */; };
 		667634841DF668C40068EF44 /* ACLTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667634831DF668C40068EF44 /* ACLTabBarViewController.swift */; };
+		668B4C341E28AAAA00364386 /* FinanceTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B4C331E28AAAA00364386 /* FinanceTimeViewController.swift */; };
 		6698C0581E10C23F00AACB33 /* USCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698C0571E10C23F00AACB33 /* USCell.swift */; };
 		6698C05A1E10F84400AACB33 /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6698C0591E10F84400AACB33 /* AlertCell.swift */; };
 		66A338451DED6F9B00AB1933 /* StockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A338441DED6F9B00AB1933 /* StockCollectionViewController.swift */; };
@@ -74,6 +75,7 @@
 		6676347F1DF6447A0068EF44 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		667634811DF65AA50068EF44 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		667634831DF668C40068EF44 /* ACLTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACLTabBarViewController.swift; sourceTree = "<group>"; };
+		668B4C331E28AAAA00364386 /* FinanceTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceTimeViewController.swift; sourceTree = "<group>"; };
 		6698C0571E10C23F00AACB33 /* USCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USCell.swift; sourceTree = "<group>"; };
 		6698C0591E10F84400AACB33 /* AlertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
 		66A338441DED6F9B00AB1933 /* StockCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockCollectionViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				66AC7F531DEFBA3000417D2B /* FinanceListViewController.swift */,
 				66AC7F551DEFBEC300417D2B /* EarnDetailViewController.swift */,
 				66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */,
+				668B4C331E28AAAA00364386 /* FinanceTimeViewController.swift */,
 			);
 			path = FinanceFunction;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				66AC7F511DEFB56800417D2B /* BaseInfoViewController.swift in Sources */,
 				66AC7F541DEFBA3000417D2B /* FinanceListViewController.swift in Sources */,
 				66AC7F581DEFBEFC00417D2B /* UIViewFactory.swift in Sources */,
+				668B4C341E28AAAA00364386 /* FinanceTimeViewController.swift in Sources */,
 				66A470551DED566200158C17 /* StockViewController.swift in Sources */,
 				66AD02111E0B8F920094231B /* Dispatch+More.swift in Sources */,
 				66A338491DEE5A6100AB1933 /* StockSellViewController.swift in Sources */,
