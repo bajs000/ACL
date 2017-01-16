@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
             self.findPwdBtn.setTitle(dic["text_findpsw"] as? String, for: .normal)
             self.perform(#selector(self.endLoading))
             let userDefault = UserDefaults.standard
-            if (dic["login"] as! NSNumber).intValue == 1 && isLogin{
+            if Int(dic["login"] as! String) == 1 && isLogin{
                 userDefault.set(dic["token"] as? String, forKey: "token")
                 _ = UserDefaults.synchronize(userDefault)
                 self.getMainMenu()

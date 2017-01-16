@@ -64,6 +64,7 @@
 		66AD02111E0B8F920094231B /* Dispatch+More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02101E0B8F920094231B /* Dispatch+More.swift */; };
 		66AD02131E0CC2FA0094231B /* RankListAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD02121E0CC2F90094231B /* RankListAlert.swift */; };
 		66AD02151E0CC3050094231B /* RankListAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AD02141E0CC3050094231B /* RankListAlert.xib */; };
+		66C429FB1E2CA7A800433100 /* CashDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C429FA1E2CA7A800433100 /* CashDetailViewController.swift */; };
 		66CBB43D1DF11BE300195273 /* TeamPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBB43C1DF11BE300195273 /* TeamPageViewController.swift */; };
 		66F6135D1E07B27500CE3613 /* FinanceDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		66AD02101E0B8F920094231B /* Dispatch+More.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dispatch+More.swift"; sourceTree = "<group>"; };
 		66AD02121E0CC2F90094231B /* RankListAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankListAlert.swift; sourceTree = "<group>"; };
 		66AD02141E0CC3050094231B /* RankListAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankListAlert.xib; sourceTree = "<group>"; };
+		66C429FA1E2CA7A800433100 /* CashDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashDetailViewController.swift; sourceTree = "<group>"; };
 		66CBB43C1DF11BE300195273 /* TeamPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPageViewController.swift; sourceTree = "<group>"; };
 		66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinanceDealViewController.swift; sourceTree = "<group>"; };
 		7A4289BBDE876C2D1299D4CA /* Pods-ACL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACL.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACL/Pods-ACL.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				66AC7F551DEFBEC300417D2B /* EarnDetailViewController.swift */,
 				66F6135C1E07B27500CE3613 /* FinanceDealViewController.swift */,
 				668B4C331E28AAAA00364386 /* FinanceTimeViewController.swift */,
+				66C429FA1E2CA7A800433100 /* CashDetailViewController.swift */,
 			);
 			path = FinanceFunction;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				66A4703D1DEC1FFB00158C17 /* FindPwdViewController.swift in Sources */,
 				66AC7F3D1DEEA3B300417D2B /* SafetyVerifyViewController.swift in Sources */,
 				66A4701C1DEBB79800158C17 /* AppDelegate.swift in Sources */,
+				66C429FB1E2CA7A800433100 /* CashDetailViewController.swift in Sources */,
 				66AC7F4F1DEFB06800417D2B /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ enum ScrollType{
     case next
 }
 
-class TeamRegistViewController: RegistViewController, UIWebViewDelegate {
+class TeamRegistViewController: RegistViewController, UIWebViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var nextPage: UIImageView!
     @IBOutlet weak var leftRegistLabel: UILabel!
@@ -35,6 +35,7 @@ class TeamRegistViewController: RegistViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     
     var scrollTo:((ScrollType) -> Void)?
+    var searchBar:UISearchBar?
     
 //    override var dataSource: NSDictionary?{
 //        didSet{
@@ -45,13 +46,20 @@ class TeamRegistViewController: RegistViewController, UIWebViewDelegate {
     
     
     @IBAction func previousBtnDidClick(_ sender: Any) {
-        self.scrollTo!(.previous)
+//        self.scrollTo!(.previous)
+        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&arrow=left&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
+        self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     @IBAction func nextBtnDidClick(_ sender: Any) {
-        self.scrollTo!(.next)
+//        self.scrollTo!(.next)
+        
+        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&arrow=right&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
+        self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
@@ -60,6 +68,40 @@ class TeamRegistViewController: RegistViewController, UIWebViewDelegate {
         let req = URLRequest(url: URL(string: "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!)!)
         self.webView.loadRequest(req)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        searchBar = UISearchBar.init(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        searchBar?.showsCancelButton = true
+        searchBar?.delegate = self
+        searchBar?.placeholder = "在此搜索"
+        self.navigationItem.titleView = searchBar
+        
+        let btn = Helpers.findClass(UIButton.self, at: searchBar!) as! UIButton
+        if UserDefaults.standard.object(forKey: "language") != nil {
+            if (UserDefaults.standard.object(forKey: "language") as! String) == "en" {
+                btn.setTitle("search", for: .normal)
+            }else {
+                btn.setTitle("搜索", for: .normal)
+            }
+        }else{
+            btn.setTitle("搜索", for: .normal)
+        }
+    }
+    
+    //MARK:- UISearchBarDelegate
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        UIApplication.shared.keyWindow?.endEditing(true)
+        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=gqmgwHFsWdOkjuK2hKH71ZOXO4AXxOm1&search_name=" + (searchBar.text)!
+        self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        searchBar.text = ""
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        UIApplication.shared.keyWindow?.endEditing(true)
+        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=gqmgwHFsWdOkjuK2hKH71ZOXO4AXxOm1&search_name=" + (searchBar.text)!
+        self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        searchBar.text = ""
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {

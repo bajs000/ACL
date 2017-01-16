@@ -111,4 +111,16 @@ class EarnDetailViewController: UITableViewController {
         return cell!
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dic = (self.dataSource?["bonus_coins"] as! NSArray)[(self.indexPath?.row)!] as! NSDictionary
+        if dic["trade_type"] != nil {
+            if (dic["trade_type"] as! String).characters.count > 0 {
+                let vc = CashDetailViewController.getInstance()
+                vc.dataSource = self.dataSource
+                vc.currentIndexPath = self.indexPath
+                _ = self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
 }
