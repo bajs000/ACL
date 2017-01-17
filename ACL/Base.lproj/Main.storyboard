@@ -1284,7 +1284,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZi-1p-d3v" id="dcD-V0-vDb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的股份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-gM-iyS">
@@ -1449,7 +1449,7 @@
         <scene sceneID="1rL-oX-e1k">
             <objects>
                 <collectionViewController id="Zm2-FB-9cj" customClass="StockCollectionViewController" customModule="ACL" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="mZh-ZA-gP7">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mZh-ZA-gP7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1839,7 +1839,7 @@
                         <viewControllerLayoutGuide type="top" id="EKN-LA-nyB"/>
                         <viewControllerLayoutGuide type="bottom" id="FjE-AE-ZnM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="QQy-fG-2f6">
+                    <view key="view" contentMode="scaleToFill" id="QQy-fG-2f6">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2751,6 +2751,9 @@
                                     <state key="normal" title="提交">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="commitBtnDidClick:" destination="Ys2-hH-6Cc" eventType="touchUpInside" id="vVd-ZM-HEG"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -2815,7 +2818,7 @@
                                             <color key="textColor" red="0.25098039220000001" green="0.25490196079999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finance-add" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-cb-6JY">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finance-add" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-cb-6JY">
                                             <rect key="frame" x="323" y="7" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="aIg-YA-qFc"/>
@@ -2842,10 +2845,40 @@
                         <outlet property="commitBtn" destination="qT7-6g-aLM" id="oK8-40-JHG"/>
                         <outlet property="footerView" destination="PaQ-GC-myH" id="5B8-tP-U2H"/>
                         <outlet property="headerView" destination="4K0-ah-mEr" id="Whx-Zy-au3"/>
+                        <outlet property="imageView" destination="hUv-ZU-XOA" id="CAm-G8-V6k"/>
+                        <outlet property="imgBg" destination="7ng-pM-pyL" id="hqx-TE-FFR"/>
                         <outlet property="sectionLabel" destination="Ffm-Li-hS4" id="71F-vX-Jwt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbc-bO-v3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="7ng-pM-pyL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBy-kn-jGh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hUv-ZU-XOA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="hUv-ZU-XOA" firstAttribute="leading" secondItem="7ng-pM-pyL" secondAttribute="leading" id="3ay-Wo-2lf"/>
+                        <constraint firstAttribute="bottom" secondItem="hUv-ZU-XOA" secondAttribute="bottom" id="PIL-4g-aJA"/>
+                        <constraint firstAttribute="trailing" secondItem="vBy-kn-jGh" secondAttribute="trailing" id="brx-tn-AIf"/>
+                        <constraint firstItem="vBy-kn-jGh" firstAttribute="top" secondItem="7ng-pM-pyL" secondAttribute="top" id="bzg-gd-mOB"/>
+                        <constraint firstItem="hUv-ZU-XOA" firstAttribute="top" secondItem="7ng-pM-pyL" secondAttribute="top" id="ea3-Vm-pYR"/>
+                        <constraint firstAttribute="bottom" secondItem="vBy-kn-jGh" secondAttribute="bottom" id="s65-GP-tqc"/>
+                        <constraint firstAttribute="trailing" secondItem="hUv-ZU-XOA" secondAttribute="trailing" id="tSd-he-uGj"/>
+                        <constraint firstItem="vBy-kn-jGh" firstAttribute="leading" secondItem="7ng-pM-pyL" secondAttribute="leading" id="v98-0r-Mu6"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="WOo-1s-FRO" appends="YES" id="u8L-NM-dtm"/>
+                    </connections>
+                </view>
                 <view contentMode="scaleToFill" id="4K0-ah-mEr">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2866,6 +2899,11 @@
                         <constraint firstItem="Ffm-Li-hS4" firstAttribute="top" secondItem="4K0-ah-mEr" secondAttribute="top" id="xEL-Da-6lh"/>
                     </constraints>
                 </view>
+                <tapGestureRecognizer id="WOo-1s-FRO">
+                    <connections>
+                        <action selector="dismissImgView:" destination="Ys2-hH-6Cc" id="f9V-N3-8q3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6222" y="3881"/>
         </scene>
@@ -4579,7 +4617,7 @@
         <scene sceneID="RA0-Fe-HzY">
             <objects>
                 <collectionViewController id="VzE-UM-p7e" customClass="TeamViewController" customModule="ACL" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="fp4-1q-s7t">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fp4-1q-s7t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5807,7 +5845,7 @@
                         <viewControllerLayoutGuide type="top" id="ohx-Yw-u9u"/>
                         <viewControllerLayoutGuide type="bottom" id="IdL-lF-pOg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="oUQ-49-lw0">
+                    <view key="view" contentMode="scaleToFill" id="oUQ-49-lw0">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -6177,7 +6215,7 @@
         <scene sceneID="RJy-u3-lzi">
             <objects>
                 <collectionViewController id="yeE-d3-HbI" customClass="FinanceViewController" customModule="ACL" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="gLd-Y5-GNk">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gLd-Y5-GNk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6391,7 +6429,7 @@
                         <viewControllerLayoutGuide type="top" id="nH3-AV-Wil"/>
                         <viewControllerLayoutGuide type="bottom" id="bbN-9z-DVE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="gKK-zk-1Cl">
+                    <view key="view" contentMode="scaleToFill" id="gKK-zk-1Cl">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -6793,7 +6831,7 @@
                         <viewControllerLayoutGuide type="top" id="is1-nL-NKX"/>
                         <viewControllerLayoutGuide type="bottom" id="ZuV-Se-Hbs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="CjM-Ow-JRT">
+                    <view key="view" contentMode="scaleToFill" id="CjM-Ow-JRT">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -7165,7 +7203,7 @@
                         <viewControllerLayoutGuide type="top" id="xNn-GT-dZS"/>
                         <viewControllerLayoutGuide type="bottom" id="8CV-sl-OC0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="6Tc-am-7rJ">
+                    <view key="view" contentMode="scaleToFill" id="6Tc-am-7rJ">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

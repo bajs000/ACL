@@ -141,10 +141,13 @@ class LoginViewController: UIViewController {
         
         self.startLoading()
         
+        self.loginBg.sd_setImage(with: URL(string: "https://www.usacl.com/login-assets/img/phone_bg.jpg"), placeholderImage: UIImage(named: "login-bg"))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        self.loginBg.sd_setImage(with: URL(string: "https://www.usacl.com/login-assets/img/phone_bg.jpg"), placeholderImage: UIImage(named: "login-bg"))
     }
     
     override func viewWillDisappear(_ animated: Bool) {

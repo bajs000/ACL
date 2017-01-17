@@ -60,6 +60,11 @@ class SetNewPwdViewController: UIViewController {
             self.backBtn.setAttributedTitle(Helpers.addDownLine((self.languageDic?["text_backtologin"] as? String)!,font:self.backBtn.titleLabel!.font,color: UIColor.white), for: .normal)
         }
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }

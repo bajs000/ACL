@@ -327,6 +327,7 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
                 }
                 
             }else{
+                SVProgressHUD.dismiss()
                 print(error!)
             }
         })
@@ -352,7 +353,7 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
                         SVProgressHUD.dismiss()
                     }
                     if dic["success"] != nil {
-                    
+                        SVProgressHUD.dismiss()
                     }else if dic["error"] != nil && value != nil{
                         SVProgressHUD.showError(withStatus: dic["error"] as! String)
                     }
@@ -360,6 +361,7 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
                 
                 }
             }else{
+                SVProgressHUD.dismiss()
                 print(error!)
             }
         })

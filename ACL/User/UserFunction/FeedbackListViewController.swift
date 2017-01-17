@@ -41,6 +41,8 @@ class FeedbackListViewController: UIViewController,UITableViewDelegate,UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.requestFeedback()
     }
     
@@ -58,8 +60,7 @@ class FeedbackListViewController: UIViewController,UITableViewDelegate,UITableVi
         self.pageBtn.layer.cornerRadius = 4
         self.feedbackBtn.layer.cornerRadius = 4
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         
     }
     
