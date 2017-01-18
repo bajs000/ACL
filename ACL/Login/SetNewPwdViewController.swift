@@ -103,7 +103,7 @@ class SetNewPwdViewController: UIViewController {
         NetworkModel.init(with: ["new_password":self.pwdTextField.text ?? "","new_confirm":self.surePwdTextField.text ?? ""], url: "index.php?route=account/reset", requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
             
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
 }

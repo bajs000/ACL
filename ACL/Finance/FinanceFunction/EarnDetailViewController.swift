@@ -95,6 +95,23 @@ class EarnDetailViewController: UITableViewController {
             (cell?.viewWithTag(24) as! UILabel).text = dic["status"] as? String
             (cell?.viewWithTag(25) as! UILabel).text = dic["remain_hours"] as? String
             (cell?.viewWithTag(26) as! UILabel).text = dic["detail"] as? String
+            
+            cell?.viewWithTag(100)?.isHidden = true
+            if dic["trade_type"] != nil && (dic["trade_type"] as! String).characters.count > 0{
+                cell?.viewWithTag(100)?.isHidden = false
+                
+                var moreTitle = "详细"
+                if UserDefaults.standard.object(forKey: "language") != nil {
+                    if (UserDefaults.standard.object(forKey: "language") as! String) == "cn" {
+                        moreTitle = "详细"
+                    }else{
+                        moreTitle = "Detail"
+                    }
+                }
+                (cell?.viewWithTag(100) as! UILabel).text = moreTitle
+            }
+            
+            
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "registCell", for: indexPath)
             let dic = (self.dataSource?["rewards"] as! NSArray)[(self.indexPath?.row)!] as! NSDictionary

@@ -82,7 +82,7 @@ class FindPwdViewController: UIViewController {
             }
             
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
     

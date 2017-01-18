@@ -51,7 +51,7 @@ class MoneyChangeViewControler: UITableViewController {
                 SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
             }
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
     

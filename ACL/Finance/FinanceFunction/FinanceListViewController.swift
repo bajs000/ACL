@@ -597,7 +597,7 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
             }
             
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
     

@@ -52,7 +52,7 @@ class TeamViewController: UICollectionViewController,UICollectionViewDelegateFlo
         if indexPath.row <= 1 {
             self.performSegue(withIdentifier: "memberPush", sender: indexPath)
         }else{
-            _ = self.navigationController?.popToViewController(TeamRegistViewController.getInstance(), animated: true)
+            _ = self.navigationController?.pushViewController(TeamRegistViewController.getInstance(), animated: true)
 //            self.performSegue(withIdentifier: "registPush", sender: indexPath)
 //            let web = WebViewController.getInstance()
 //            web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!

@@ -58,6 +58,7 @@ class StockSellViewController: UITableViewController {
             }
         }, failure: { (request) in
             print(request.error!)
+            SVProgressHUD.dismiss()
         })
     }
     

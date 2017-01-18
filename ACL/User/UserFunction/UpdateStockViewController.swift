@@ -15,6 +15,7 @@ class UpdateStockViewController: UITableViewController {
     @IBOutlet var headerView: UIView!
     var dataSource:NSDictionary?
     var keys:NSArray?
+    var currentIndexPath:IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +79,7 @@ class UpdateStockViewController: UITableViewController {
             (cell.viewWithTag(2) as! UILabel).text = dic["rank"] as? String
             (cell.viewWithTag(3) as! UILabel).text = dic["amount"] as? String
             (cell.viewWithTag(5) as! UIButton).layer.cornerRadius = 2
+            (cell.viewWithTag(5) as! UIButton).addTarget(self, action: #selector(updateStockBtnDidClick(_:)), for: .touchUpInside)
             if (dic["show_upgrade_button"] as? NSNumber)?.intValue == 1 {
                 (cell.viewWithTag(5) as! UIButton).isHidden = false
                 (cell.viewWithTag(4) as! UILabel).isHidden = true
@@ -109,9 +111,42 @@ class UpdateStockViewController: UITableViewController {
         return cell
     }
     
+    func updateStockBtnDidClick(_ sender:UIButton) -> Void {
+        
+        let cell = Helpers.findSuperViewClass(UITableViewCell.self, with: sender) as! UITableViewCell
+        let indexPath = self.tableView.indexPath(for: cell)
+//        let dic = (self.dataSource?["upgrade_total"] as! NSDictionary)[self.keys?[(indexPath?.row)!] as! String] as! [String:Any]
+        currentIndexPath = indexPath
+        self.showAlert(currentIndexPath!)
+        
+        
+    }
+    
+    func showAlert(_ indexPath:IndexPath) -> Void {
+        var msg:String?
+        if self.dataSource?["error"] != nil && (self.dataSource?["error"] as! String).characters.count > 0 {
+            msg = self.dataSource?["error"] as? String
+        }
+        
+        let alert = UIAlertController(title: self.dataSource?["text_upgrade_title"] as? String, message: msg, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = self.dataSource?["text_account_password"] as? String
+        }
+        let sureAction = UIAlertAction(title: self.dataSource?["text_upgrade_upgrade"] as? String, style: .default) { (action) in
+            self.requestUpdateStock((alert.textFields?[0].text)!,rank: self.keys?[(indexPath.row)] as! String)
+        }
+        let cancelAction = UIAlertAction(title: self.dataSource?["text_upgrade_close1"] as? String, style: .default) { (action) in
+            
+        }
+        alert.addAction(sureAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func requestUpdate(){
         SVProgressHUD.show()
-        NetworkModel.init(with: ["account_password":"Abcd123","rank":"2"], url: "index.php?route=account/upgrade_account&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!, requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
+        //["account_password":"Abcd123","rank":"2"]
+        NetworkModel.init(with: [:], url: "index.php?route=account/upgrade_account&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!, requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
             let dic:NSDictionary = request.responseObject as! NSDictionary
             if Int(dic["login"] as! String) == 1 {
                 SVProgressHUD.dismiss()
@@ -128,6 +163,36 @@ class UpdateStockViewController: UITableViewController {
             }
         }, failure:{(request) in
             print(request.error!)
+            SVProgressHUD.dismiss()
+        })
+    }
+    
+    func requestUpdateStock(_ pwd:String, rank:String){
+        SVProgressHUD.show()
+        NetworkModel.init(with: ["account_password":pwd,"rank":rank], url: "index.php?route=account/upgrade_account&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!, requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
+            let dic:NSDictionary = request.responseObject as! NSDictionary
+            if Int(dic["login"] as! String) == 1 {
+                SVProgressHUD.dismiss()
+                if dic["error"] != nil {
+                    SVProgressHUD.showError(withStatus: dic["error"] as! String)
+                    self.showAlert(self.currentIndexPath!)
+                }else{
+                    
+                }
+                self.dataSource = dic
+                if self.dataSource != nil && self.dataSource?["upgrade_total"] != nil{
+                    self.keys = (self.dataSource?["upgrade_total"] as! NSDictionary).allKeys as NSArray?
+                    self.keys = self.keys?.sortedArray(using: #selector(NSDecimalNumber.compare(_:))) as NSArray?
+                }
+                self.tableView.reloadData()
+                self.title = dic["text_upgrade_title"] as? String
+            }else{
+                self.dismiss(animated: true, completion: nil)
+                SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
+            }
+        }, failure:{(request) in
+            print(request.error!)
+            SVProgressHUD.dismiss()
         })
     }
     

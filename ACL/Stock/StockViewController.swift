@@ -272,6 +272,7 @@ class StockViewController: UIViewController,UISearchBarDelegate,UITableViewDeleg
             }
         }, failure:{(request) in
             print(request.error!)
+            SVProgressHUD.dismiss()
         })
     }
     

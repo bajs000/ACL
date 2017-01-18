@@ -293,7 +293,7 @@ class CashDetailViewController: UITableViewController, UIImagePickerControllerDe
                     SVProgressHUD.showError(withStatus: dic["error_warning"] as! String)
                 }
             }, failure: { (request) in
-                
+                SVProgressHUD.dismiss()
             })
         }
         var cancelTitle = "取消"

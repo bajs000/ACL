@@ -90,7 +90,8 @@ class TeamRegistViewController: RegistViewController, UIWebViewDelegate, UISearc
     //MARK:- UISearchBarDelegate
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.keyWindow?.endEditing(true)
-        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=gqmgwHFsWdOkjuK2hKH71ZOXO4AXxOm1&search_name=" + (searchBar.text)!
+        var url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)! + "&search_name=" + (searchBar.text)!
+        url = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         self.webView.loadRequest(URLRequest(url: URL(string: url)!))
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         searchBar.text = ""
@@ -98,7 +99,8 @@ class TeamRegistViewController: RegistViewController, UIWebViewDelegate, UISearc
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.keyWindow?.endEditing(true)
-        let url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=gqmgwHFsWdOkjuK2hKH71ZOXO4AXxOm1&search_name=" + (searchBar.text)!
+        var url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)! + "&search_name=" + (searchBar.text)!
+        url = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         self.webView.loadRequest(URLRequest(url: URL(string: url)!))
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         searchBar.text = ""

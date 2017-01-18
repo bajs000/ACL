@@ -60,6 +60,7 @@ class BaseInfoViewController: UITableViewController {
             }
         }, failure:{(request) in
             print(request.error!)
+            SVProgressHUD.dismiss()
         })
     }
     

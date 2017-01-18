@@ -60,6 +60,7 @@ class FeedbackViewController: UITableViewController, UITextViewDelegate, UINavig
             }
         }, failure: { (request) in
             print(request.error!)
+            SVProgressHUD.dismiss()
         })
     }
     

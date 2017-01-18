@@ -93,7 +93,7 @@ class VerifyViewController: UIViewController {
         NetworkModel.init(with: ["verification":self.verifyView.text ?? ""], url: "index.php?route=common/login/validateSecurityCode", requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
             
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
     

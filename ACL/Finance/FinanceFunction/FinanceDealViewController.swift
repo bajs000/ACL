@@ -91,7 +91,7 @@ class FinanceDealViewController: UITableViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }, failure: { (request) in
-            
+            SVProgressHUD.dismiss()
         })
     }
 

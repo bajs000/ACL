@@ -231,7 +231,8 @@ class MainViewController: UITableViewController, UIWebViewDelegate {
 //        web.url = "https://www.usacl.com/app/v1/index.php?route=team/app_tree&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!
 //        _ = self.navigationController?.pushViewController(web, animated: true)
 //        _ = self.navigationController?.pushViewController(TeamPageViewController.getInstance(), animated: true)
-        _ = self.navigationController?.popToViewController(TeamRegistViewController.getInstance(), animated: true)
+        
+        _ = self.navigationController?.pushViewController(TeamRegistViewController.getInstance(), animated: true)
 //        let alert = Bundle.main.loadNibNamed("CustomAlertView", owner: nil, options: nil)?[1] as! CustomAlertView
 //        if self.languageDic != nil{
 //            alert.showNotice(title: (self.languageDic?["text_bulletin_title"] as? String)!, detail: (Helpers.optimizeString((self.languageDic?["text_bulletin_content"] as? String)!)))
