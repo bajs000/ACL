@@ -34,6 +34,7 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
     var page = 1
     var type:FinanceType = .earn
     var searchDic:[String:String]?
+    var searchBar:UISearchBar?
     
     @IBAction func pageChangeValue(_ sender: UIButton) {
         if sender.tag == 1 {
@@ -56,29 +57,29 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
         
-        let searchBar = UISearchBar.init(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
-        searchBar.showsCancelButton = true
-        searchBar.delegate = self
-        switch type {
-        case .earn:
-            searchBar.placeholder = "在此搜索动态收益."
-            break
-        case .regist:
-            searchBar.placeholder = "在此搜索注册币收支记录."
-            break
-        case .registDeal:
-            searchBar.placeholder = "在此搜索动态收益."
-            break
-        case .cash:
-            searchBar.placeholder = "在此搜索动态收益."
-            break
-        case .cashDeal:
-            searchBar.placeholder = "在此搜索动态收益."
-            break
-        case .usScore:
-            searchBar.placeholder = "在此搜索动态收益."
-            break
-        }
+        searchBar = UISearchBar.init(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        searchBar?.showsCancelButton = true
+        searchBar?.delegate = self
+//        switch type {
+//        case .earn:
+//            searchBar?.placeholder = "在此搜索动态收益."
+//            break
+//        case .regist:
+//            searchBar?.placeholder = "在此搜索注册币收支记录."
+//            break
+//        case .registDeal:
+//            searchBar?.placeholder = "在此搜索动态收益."
+//            break
+//        case .cash:
+//            searchBar?.placeholder = "在此搜索动态收益."
+//            break
+//        case .cashDeal:
+//            searchBar?.placeholder = "在此搜索动态收益."
+//            break
+//        case .usScore:
+//            searchBar?.placeholder = "在此搜索动态收益."
+//            break
+//        }
         self.navigationItem.titleView = searchBar
         
         self.pageBtn.layer.cornerRadius = 4
@@ -538,6 +539,7 @@ class FinanceListViewController: UIViewController,UITableViewDelegate,UITableVie
                 
                 
                 if self.dataSource != nil{
+                    self.searchBar?.placeholder = self.dataSource?["text_search"] as? String
                     switch self.type {
                     case .earn:
                         if self.dataSource?["perday_bonus"] != nil {

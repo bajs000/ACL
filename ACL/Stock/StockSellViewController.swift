@@ -29,7 +29,7 @@ class StockSellViewController: UITableViewController {
     @IBAction func commitBtnDidClick(_ sender: Any) {
         showError = true
         SVProgressHUD.show()
-        NetworkModel.init(with: [:], url: "index.php?route=share/my_share/validateSellShare&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!, requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
+        NetworkModel.init(with: ["sell_amount":self.sellStockNumTextField.text!,"account_password":self.pwdTextField.text!], url: "index.php?route=share/my_share/validateSellShare&token=" + (UserDefaults.standard.object(forKey: "token") as? String)!, requestMethod: .POST, requestType: .HTTP).startWithCompletionBlock(success: { (request) in
             print(request.responseObject ?? "")
             SVProgressHUD.dismiss()
             let dic:NSDictionary = request.responseObject as! NSDictionary

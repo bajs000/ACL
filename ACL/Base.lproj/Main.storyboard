@@ -1533,7 +1533,7 @@
                         <viewControllerLayoutGuide type="top" id="y2U-l0-DZh"/>
                         <viewControllerLayoutGuide type="bottom" id="f6g-TB-UoD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="5KZ-tE-i4V">
+                    <view key="view" contentMode="scaleToFill" id="5KZ-tE-i4V">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1618,7 +1618,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-KX-dsY">
-                                <rect key="frame" x="0.0" y="42" width="375" height="576"/>
+                                <rect key="frame" x="0.0" y="42" width="375" height="512"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="SoW-Ie-0cQ" id="MrW-wd-7xx"/>
@@ -1840,7 +1840,7 @@
                         <viewControllerLayoutGuide type="top" id="EKN-LA-nyB"/>
                         <viewControllerLayoutGuide type="bottom" id="FjE-AE-ZnM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QQy-fG-2f6">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="QQy-fG-2f6">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -6227,7 +6227,7 @@
         <scene sceneID="RJy-u3-lzi">
             <objects>
                 <collectionViewController id="yeE-d3-HbI" customClass="FinanceViewController" customModule="ACL" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gLd-Y5-GNk">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="gLd-Y5-GNk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6441,7 +6441,7 @@
                         <viewControllerLayoutGuide type="top" id="nH3-AV-Wil"/>
                         <viewControllerLayoutGuide type="bottom" id="bbN-9z-DVE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gKK-zk-1Cl">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="gKK-zk-1Cl">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -6843,7 +6843,7 @@
                         <viewControllerLayoutGuide type="top" id="is1-nL-NKX"/>
                         <viewControllerLayoutGuide type="bottom" id="ZuV-Se-Hbs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CjM-Ow-JRT">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="CjM-Ow-JRT">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
